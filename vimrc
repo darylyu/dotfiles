@@ -9,7 +9,7 @@ set expandtab
 
 " always display the status line
 set laststatus=2
-# show the line number
+" show the line number
 set ruler
 " disable visual bell
 set t_vb=
@@ -25,3 +25,7 @@ map ] : tabnext <cr>
 map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
 map <F5> :Tlist<CR>
+
+set tags=./tags;/
+set wrap
+"autocmd BufWritePre *.rby :%s/\s\+$//e

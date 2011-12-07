@@ -1,0 +1,16 @@
+[core]
+	excludesfile = /home/dyu/.gitignore_global
+	editor = vim
+
+[alias]
+	br = branch
+	co = checkout
+	st = status -bs
+  meld = difftool -t meld
+
+[color]
+  ui = true
+
+[user]
+  name = D. Yu
+  email = hello@darylyu.com

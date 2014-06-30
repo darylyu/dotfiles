@@ -1,12 +1,11 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="nanotech"
-ZSH_THEME="bira"
+ZSH_THEME="terminalparty"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -14,36 +13,30 @@ ZSH_THEME="bira"
 alias rm="rm -i"
 alias grep="grep --color=always"
 
-export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
-export JAVA_OPTS="-XX:MaxPermSize=512m"
-export MAVEN_OPTS=$JAVA_OPTS
-export CATALINA_OPTS=$JAVA_OPTS
-export CATALINA_HOME="/usr/share/tomcat7"
-
-# Set to this to use case-sensitive completion
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
+# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment to change how often before auto-updates occur? (in days)
+# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment following line if you want to disable colors in ls
+# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
+# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want to disable command autocorrection
+# Uncomment the following line to disable command auto-correction.
 # DISABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -61,5 +54,3 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
-
-export PATH="/home/dyu/Sandbox/google_appengine:$PATH"

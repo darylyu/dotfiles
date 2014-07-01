@@ -14,3 +14,6 @@
 [user]
   name = D. Yu
   email = hello@darylyu.com
+
+[merge]
+  summary = true

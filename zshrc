@@ -54,3 +54,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
+
+export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
+export JAVA_OPTS="-XX:MaxPermSize=512m"
+export MAVEN_OPTS=$JAVA_OPTS
+export CATALINA_OPTS="$JAVA_OPTS -Dorg.ektorp.support.AutoUpdateViewOnChange=true"
+export CATALINA_HOME=/opt/tomcat

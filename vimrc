@@ -24,7 +24,7 @@ VAMActivate matchit.zip vim-addon-commenting
 :set encoding=utf-8
 :set fileencoding=utf-8
 
-:hi CursorLine   cterm=NONE ctermbg=cyan ctermfg=white guibg=darkred guifg=white
+:hi CursorLine   cterm=NONE ctermbg=33 ctermfg=white guibg=darkred guifg=white
 :set cursorline
 
 set shiftwidth=4
@@ -50,6 +50,8 @@ set mouse=a
 " keyboard mappings
 map [ : tabp <cr>
 map ] : tabnext <cr>
+
+autocmd BufWritePre * :%s/\s\+$//e
 
 map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>

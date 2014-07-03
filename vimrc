@@ -51,6 +51,8 @@ set mouse=a
 map [ : tabp <cr>
 map ] : tabnext <cr>
 
+autocmd BufWritePre * :%s/\s\+$//e
+
 map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
 map <F5> :Tlist<CR>

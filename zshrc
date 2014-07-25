@@ -7,18 +7,19 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="terminalparty"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Shell aliases
+alias cp="cp -i"
+alias mv="mv -i"
 alias rm="rm -i"
 alias grep="grep --color=always"
-alias tomcat_start="/opt/tomcat/bin/startup.sh"
 
+# Aliases for Tomcat
 function _tomcat_kill {
     kill -9 `ps -eaf | grep -e "-Dcatalina.home=/opt/tomcat" | grep -v grep | gawk '{print $2}'`
 }
-alias tomcat_kill="_tomcat_kill"
-alias tomcat_stop="/opt/tomcat/bin/shutdown.sh ; sleep 5; _tomcat_kill"
+alias tc_start="/opt/tomcat/bin/startup.sh"
+alias tc_kill="_tomcat_kill"
+alias tc_stop="/opt/tomcat/bin/shutdown.sh ; sleep 5; _tomcat_kill"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

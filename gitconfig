@@ -1,11 +1,11 @@
 [core]
-	excludesfile = /home/dyu/.gitignore_global
-	editor = vim
+  excludesfile = ~/.gitignore_global
+  editor = vim
 
 [alias]
-	br = branch
-	co = checkout
-	st = status -bs
+  br = branch
+  co = checkout
+  st = status -bs
   meld = difftool -t meld
 
 [color]

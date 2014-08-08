@@ -24,7 +24,7 @@ VAMActivate matchit.zip vim-addon-commenting The_NERD_tree
 :set encoding=utf-8
 :set fileencoding=utf-8
 
-:hi CursorLine   cterm=NONE ctermbg=33 ctermfg=white guibg=darkred guifg=white
+:hi CursorLine   cterm=NONE ctermbg=darkgray
 :set cursorline
 
 set shiftwidth=4

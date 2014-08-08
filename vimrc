@@ -17,7 +17,7 @@ fun! SetupVAM()
 endfun
 
 call SetupVAM()
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab
 " use <c-x><c-p> to complete plugin names
 
 

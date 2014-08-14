@@ -61,3 +61,6 @@ map <F5> :Tlist<CR>
 set tags=./tags;/
 set wrap
 "autocmd BufWritePre *.rby :%s/\s\+$//e
+
+" NERD Tree settings
+let NERDTreeIgnore = ['\.pyc$']

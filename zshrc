@@ -61,8 +61,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /usr/local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
+PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
 
+export PATH="/home/dyu/src/sdk/android-sdk-linux/tools:$PATH"
 export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
 export JAVA_OPTS="-XX:MaxPermSize=512m"
 export MAVEN_OPTS=$JAVA_OPTS

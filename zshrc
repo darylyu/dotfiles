@@ -13,6 +13,12 @@ alias mv="mv -i"
 alias rm="rm -i"
 alias grep="grep --color=always"
 
+function reactivate {
+    TMP_VENV=( $(echo $VIRTUAL_ENV | gawk -F '/' '{print $NF}')) && \
+    deactivate && \
+    workon $TMP_VENV
+}
+
 # Aliases for Tomcat
 function _tomcat_kill {
     kill -9 `ps -eaf | grep -e "-Dcatalina.home=/opt/tomcat" | grep -v grep | gawk '{print $2}'`

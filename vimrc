@@ -17,7 +17,8 @@ fun! SetupVAM()
 endfun
 
 call SetupVAM()
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab
+" Install vim-nox so you can run Command-T on Linux
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab Command-T
 " use <c-x><c-p> to complete plugin names
 
 

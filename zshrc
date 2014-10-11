@@ -63,7 +63,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /usr/local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
@@ -75,3 +74,6 @@ export JAVA_OPTS="-XX:MaxPermSize=512m"
 export MAVEN_OPTS=$JAVA_OPTS
 export CATALINA_OPTS="$JAVA_OPTS -Dorg.ektorp.support.AutoUpdateViewOnChange=true"
 export CATALINA_HOME=/opt/tomcat
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

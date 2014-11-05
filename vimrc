@@ -36,6 +36,7 @@ set ignorecase
 set smartcase
 set nostartofline
 set expandtab
+set hlsearch
 
 " always display the status line
 set laststatus=2

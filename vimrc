@@ -25,8 +25,13 @@ VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab Command-T
 :set encoding=utf-8
 :set fileencoding=utf-8
 
-:hi CursorLine   cterm=NONE ctermbg=darkgray
+:hi CursorLine   cterm=NONE ctermbg=gray
 :set cursorline
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
 
 set shiftwidth=4
 set softtabstop=4

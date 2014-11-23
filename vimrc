@@ -55,6 +55,7 @@ map ] : tabnext <cr>
 map <leader>n : execute 'NERDTreeToggle'<CR>
 
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 
 map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>

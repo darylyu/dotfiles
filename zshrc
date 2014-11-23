@@ -60,6 +60,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Steal C-s and C-q from the terminal.
+# We need this so we can do splits in Command-T
+stty start undef stop undef
+
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 

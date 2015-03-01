@@ -44,6 +44,7 @@ set smartcase
 set nostartofline
 set expandtab
 set hlsearch
+set wildignore+=*.pyc
 
 " always display the status line
 set laststatus=2

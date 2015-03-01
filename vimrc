@@ -44,7 +44,6 @@ set smartcase
 set nostartofline
 set expandtab
 set hlsearch
-set paste
 
 " always display the status line
 set laststatus=2

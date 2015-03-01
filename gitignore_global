@@ -1,6 +1,6 @@
 # Editor swap/temporary files #
 *~
-*.swp
+*.sw[po]
 
 # Compiled source #
 ###################
@@ -34,6 +34,7 @@
 *.log
 *.sql
 *.sqlite
+*.sqlite3
 *.db
 
 # OS generated files #

@@ -44,7 +44,7 @@ set smartcase
 set nostartofline
 set expandtab
 set hlsearch
-set wildignore+=*.pyc
+set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*
 
 " always display the status line
 set laststatus=2

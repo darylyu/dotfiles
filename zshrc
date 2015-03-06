@@ -7,6 +7,10 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="terminalparty"
 
+# goodbye, missing locale warnings
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Shell aliases
 alias cp="cp -i"
 alias mv="mv -i"

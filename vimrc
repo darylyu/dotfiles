@@ -25,8 +25,8 @@ VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab github:wince
 :set encoding=utf-8
 :set fileencoding=utf-8
 
-:hi CursorLine   cterm=NONE ctermbg=10
-:hi Visual ctermbg=10
+:hi CursorLine   cterm=NONE ctermbg=16
+:hi Visual ctermbg=16
 
 :set cursorline
 augroup CursorLine

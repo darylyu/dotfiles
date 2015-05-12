@@ -23,14 +23,6 @@ function reactivate {
     workon $TMP_VENV
 }
 
-# Aliases for Tomcat
-function _tomcat_kill {
-    kill -9 `ps -eaf | grep -e "-Dcatalina.home=/opt/tomcat" | grep -v grep | gawk '{print $2}'`
-}
-alias tc_start="/opt/tomcat/bin/startup.sh"
-alias tc_kill="_tomcat_kill"
-alias tc_stop="/opt/tomcat/bin/shutdown.sh ; sleep 5; _tomcat_kill"
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -75,13 +67,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
-
-export PATH="/home/dyu/src/sdk/android-sdk-linux/tools:$PATH"
-export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
-export JAVA_OPTS="-XX:MaxPermSize=512m"
-export MAVEN_OPTS=$JAVA_OPTS
-export CATALINA_OPTS="$JAVA_OPTS -Dorg.ektorp.support.AutoUpdateViewOnChange=true"
-export CATALINA_HOME=/opt/tomcat
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

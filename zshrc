@@ -16,6 +16,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 alias grep="grep --color=always"
+alias hgrep="history | grep $1"
 
 function reactivate {
     TMP_VENV=( $(echo $VIRTUAL_ENV | gawk -F '/' '{print $NF}')) && \

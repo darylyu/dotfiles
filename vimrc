@@ -76,6 +76,6 @@ set tags=./tags;/
 set wrap
 
 " NERD Tree settings
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', 'bower_components', 'node_modules', 'dist']
 
 let g:vim_addon_commenting = {'force_filetype_comments': {'php': ['#',''], 'c' : ['/*','*/']}}

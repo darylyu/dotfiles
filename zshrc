@@ -69,5 +69,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.rbenv/bin:$PATH"
+
 eval "$(rbenv init -)"

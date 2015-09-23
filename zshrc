@@ -74,4 +74,6 @@ PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
 export PYTHONSTARTUP=~/.pythonrc
 export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH
 
+# rbenv
+export PATH="$HOME/bin:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

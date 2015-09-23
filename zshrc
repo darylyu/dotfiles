@@ -70,6 +70,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
 
-export PATH="$HOME/bin:$HOME/.rbenv/bin:$PATH"
+# Read ~/.pythonrc
+export PYTHONSTARTUP=~/.pythonrc
+export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH
 
 eval "$(rbenv init -)"

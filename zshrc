@@ -67,13 +67,8 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 
 source ~/.local/bin/virtualenvwrapper.sh
 
-### Added by the Heroku Toolbelt
-PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"
+PATH="~/.local/bin:$PATH"
 
 # Read ~/.pythonrc
 export PYTHONSTARTUP=~/.pythonrc
 export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH
-
-# rbenv
-export PATH="$HOME/bin:$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"

@@ -65,7 +65,7 @@ stty start undef stop undef
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:/home/dyu/.cabal/bin:$PATH"

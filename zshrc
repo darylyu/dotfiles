@@ -65,10 +65,6 @@ stty start undef stop undef
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-source ~/.local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 PATH="~/.local/bin:$PATH"
-
-# Read ~/.pythonrc
-export PYTHONSTARTUP=~/.pythonrc
-export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH

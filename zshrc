@@ -15,7 +15,6 @@ export LC_ALL=en_US.UTF-8
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
-alias grep="grep --color=always"
 alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
 
@@ -61,6 +60,9 @@ source $ZSH/oh-my-zsh.sh
 # Steal C-s and C-q from the terminal.
 # We need this so we can do splits in Command-T
 stty start undef stop undef
+
+# don't include vim swap files, compiled python files, and binary files when using grep
+export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*.swp -I'
 
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games

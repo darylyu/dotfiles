@@ -58,8 +58,6 @@ set number
 set mouse=a
 
 " keyboard mappings
-map [ : tabp <cr>
-map ] : tabnext <cr>
 map <leader>n : execute 'NERDTreeToggle'<CR>
 
 autocmd BufWritePre * :%s/\s\+$//e

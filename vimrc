@@ -18,7 +18,7 @@ endfun
 
 call SetupVAM()
 " Install vim-nox so you can run Command-T on Linux
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab github:wincent/command-t vim-flake8
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab github:wincent/command-t
 " use <c-x><c-p> to complete plugin names
 
 

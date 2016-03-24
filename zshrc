@@ -18,7 +18,7 @@ alias rm="rm -i"
 alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
 
-source .ssh_aliases
+source ~/.ssh_aliases
 
 function reactivate {
     TMP_VENV=( $(echo $VIRTUAL_ENV | gawk -F '/' '{print $NF}')) && \

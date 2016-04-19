@@ -45,6 +45,8 @@ set nostartofline
 set expandtab
 set hlsearch
 set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*
+" set tags+=tags,~/.tags
+set tags=./tags;/
 
 " always display the status line
 set laststatus=2

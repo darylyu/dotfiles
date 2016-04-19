@@ -64,7 +64,7 @@ source $ZSH/oh-my-zsh.sh
 stty start undef stop undef
 
 # don't include vim swap files, compiled python files, and binary files when using grep
-export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*.swp -I'
+export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*.swp -I --exclude=tags'
 
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games

@@ -67,8 +67,8 @@ stty start undef stop undef
 export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*.swp -I --exclude=tags'
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-PATH="~/.local/bin:$PATH"
+export PATH="~/bin:~/.local/bin:$PATH"

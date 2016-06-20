@@ -72,3 +72,6 @@ PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/us
 source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH="~/bin:~/.local/bin:$PATH"
+
+export NVM_DIR="/Users/dyu/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

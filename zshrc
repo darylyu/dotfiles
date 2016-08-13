@@ -55,7 +55,7 @@ function reactivate {
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python django vi-mode)
+plugins=(git python django)
 
 source $ZSH/oh-my-zsh.sh
 

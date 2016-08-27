@@ -18,7 +18,7 @@ endfun
 
 call SetupVAM()
 " Install vim-nox so you can run Command-T on Linux
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab github:wincent/command-t surround
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab github:wincent/command-t surround github:nvie/vim-flake8
 " use <c-x><c-p> to complete plugin names
 
 
@@ -67,6 +67,7 @@ autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype js setlocal ts=2 sw=2 sts=2 expandtab
+autocmd BufWritePost *.py call Flake8()
 
 map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -77,5 +78,4 @@ set wrap
 
 " NERD Tree settings
 let NERDTreeIgnore = ['\.pyc$', 'bower_components', 'node_modules', 'dist', '__pycache__']
-
 let g:vim_addon_commenting = {'force_filetype_comments': {'php': ['#',''], 'c' : ['/*','*/']}}

@@ -75,8 +75,3 @@ export PATH="~/bin:~/.local/bin:$PATH"
 
 export NVM_DIR="/Users/dyu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# set $SSH_AUTH_SOCK to a file so tmux can pick it up later
-if test "$SSH_AUTH_SOCK" ; then
-  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
-fi

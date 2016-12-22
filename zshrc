@@ -67,9 +67,7 @@ stty start undef stop undef
 export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*.swp -I --exclude=tags --exclude-dir=htmlcov --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build'
 
 # Customize to your needs...
-PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
-source /usr/local/bin/virtualenvwrapper.sh
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
 export PATH="~/bin:~/.local/bin:$PATH"
 

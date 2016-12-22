@@ -69,6 +69,7 @@ export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*
 # Customize to your needs...
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 export PATH="~/bin:~/.local/bin:$PATH"
 
 export NVM_DIR="/Users/dyu/.nvm"

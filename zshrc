@@ -71,6 +71,11 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 PATH=~/Library/Python/2.7/bin:$PATH
 export PATH="~/bin:~/.local/bin:$PATH"
 
+export FZF_DEFAULT_COMMAND='
+  (git ls-tree -r --name-only HEAD ||
+         find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
+        sed s/^..//) 2> /dev/null'
+
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 export NVM_DIR="/Users/dyu/.nvm"

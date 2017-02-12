@@ -18,7 +18,7 @@ endfun
 
 call SetupVAM()
 " Install vim-nox so you can run Command-T on Linux
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab github:wincent/command-t surround github:nvie/vim-flake8
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:nvie/vim-flake8 github:junegunn/fzf
 " use <c-x><c-p> to complete plugin names
 
 
@@ -51,6 +51,7 @@ set mouse=a
 
 " keyboard mappings
 map <leader>n : execute 'NERDTreeToggle'<CR>
+map <leader>t : execute 'FZF'<CR>
 
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab

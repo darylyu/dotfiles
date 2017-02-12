@@ -76,6 +76,8 @@ export FZF_DEFAULT_COMMAND='
          find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
         sed s/^..//) 2> /dev/null'
 
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 export NVM_DIR="/Users/dyu/.nvm"

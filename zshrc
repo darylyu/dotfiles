@@ -59,10 +59,6 @@ plugins=(vi-mode git python django)
 
 source $ZSH/oh-my-zsh.sh
 
-# Steal C-s and C-q from the terminal.
-# We need this so we can do splits in Command-T
-stty start undef stop undef
-
 # don't include vim swap files, compiled python files, and binary files when using grep
 export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*.swp -I --exclude=tags --exclude-dir=htmlcov --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build'
 

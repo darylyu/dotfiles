@@ -76,5 +76,7 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
+export PATH=${PATH}:node_modules/.bin
+
 export NVM_DIR="/Users/dyu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

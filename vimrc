@@ -18,21 +18,13 @@ endfun
 
 call SetupVAM()
 " Install vim-nox so you can run Command-T on Linux
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic github:tpope/vim-sleuth
 " use <c-x><c-p> to complete plugin names
 
 
 :set encoding=utf-8
 :set fileencoding=utf-8
 
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set autoindent
-set ignorecase
-set smartcase
-set nostartofline
-set expandtab
 set hlsearch
 set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**static/*
 " set tags+=tags,~/.tags

@@ -18,7 +18,7 @@ endfun
 
 call SetupVAM()
 " Install vim-nox so you can run Command-T on Linux
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:nvie/vim-flake8 github:junegunn/fzf
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic
 " use <c-x><c-p> to complete plugin names
 
 
@@ -60,7 +60,6 @@ autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype js setlocal ts=2 sw=2 sts=2 expandtab
-autocmd BufWritePost *.py call Flake8()
 
 map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -68,6 +67,18 @@ map <F5> :Tlist<CR>
 
 set tags=./tags;/
 set wrap
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_checkers = ['flake8']
 
 " NERD Tree settings
 let NERDTreeIgnore = ['\.pyc$', 'bower_components', 'node_modules', 'dist', '__pycache__', 'celerybeat-schedule', '\.retry$']

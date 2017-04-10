@@ -24,6 +24,8 @@ VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround git
 
 :set encoding=utf-8
 :set fileencoding=utf-8
+:set ignorecase
+:set smartcase
 
 set hlsearch
 set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**static/*

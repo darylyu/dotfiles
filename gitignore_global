@@ -48,3 +48,5 @@ ehthumbs.db
 Thumbs.db
 tags
 .cache/
+.coverage
+htmlcov

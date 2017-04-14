@@ -73,5 +73,5 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
 
 " NERD Tree settings
-let NERDTreeIgnore = ['\.pyc$', 'bower_components', 'node_modules', 'dist', '__pycache__', 'celerybeat-schedule', '\.retry$']
+let NERDTreeIgnore = ['\.pyc$', 'bower_components', 'node_modules', 'dist', '__pycache__', 'celerybeat-schedule', '\.retry$', 'htmlcov']
 let g:vim_addon_commenting = {'force_filetype_comments': {'php': ['#',''], 'c' : ['/*','*/']}}

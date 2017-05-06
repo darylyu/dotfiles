@@ -49,4 +49,5 @@ Thumbs.db
 tags
 .cache/
 .coverage
+.coverage\.*
 htmlcov

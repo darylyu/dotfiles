@@ -80,3 +80,6 @@ export PATH=${PATH}:node_modules/.bin
 
 export NVM_DIR="/Users/dyu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# OPAM(ocaml package manager) configuration
+. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

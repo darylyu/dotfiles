@@ -56,6 +56,8 @@ map <leader>n : execute 'NERDTreeToggle'<CR>
 map <leader>t : execute 'FZF'<CR>
 map <leader>s : w<CR>
 map <leader>q : q<CR>
+map <leader>p : execute 'set paste'<CR>
+map <leader>P : execute 'set nopaste'<CR>
 
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab

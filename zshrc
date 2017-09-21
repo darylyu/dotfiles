@@ -20,12 +20,6 @@ alias lsvirtualenv="lsvirtualenv -b"
 
 source ~/.ssh_aliases
 
-function reactivate {
-    TMP_VENV=( $(echo $VIRTUAL_ENV | gawk -F '/' '{print $NF}')) && \
-    deactivate && \
-    workon $TMP_VENV
-}
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

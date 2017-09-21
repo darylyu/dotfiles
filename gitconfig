@@ -9,6 +9,7 @@
   st = status -bs
   meld = difftool -t meld
   lol = log --graph --pretty=oneline --abbrev-commit
+  far = "!f() { git fetch \"$1\" && git rebase "$1"/\"$2\"; }; f"
 
 [color]
   ui = true

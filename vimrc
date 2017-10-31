@@ -18,7 +18,7 @@ endfun
 
 call SetupVAM()
 " Install vim-nox so you can run Command-T on Linux
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic github:majutsushi/tagbar
 " use <c-x><c-p> to complete plugin names
 
 
@@ -37,8 +37,8 @@ set nostartofline
 set expandtab
 set hlsearch
 set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**static/*
-" set tags+=tags,~/.tags
 set tags=./tags;/
+set wrap
 
 " always display the status line
 set laststatus=2
@@ -54,6 +54,7 @@ set mouse=a
 " keyboard mappings
 map <leader>n : execute 'NERDTreeToggle'<CR>
 map <leader>t : execute 'FZF'<CR>
+map <leader>T : TagbarToggle<CR>
 map <leader>s : w<CR>
 map <leader>q : q<CR>
 map <leader>p : execute 'set paste'<CR>
@@ -69,16 +70,11 @@ map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
 map <F5> :Tlist<CR>
 
-set tags=./tags;/
-set wrap
-
-
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_loc_list_height=0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
-
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
 

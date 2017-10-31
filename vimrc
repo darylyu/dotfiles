@@ -54,12 +54,14 @@ map <leader>q : q<CR>
 map <leader>s : w<CR>
 map <leader>t : execute 'FZF'<CR>
 
+" coding conventions settings
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype js setlocal ts=2 sw=2 sts=2 expandtab
 
+" syntastic settings
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_loc_list_height=0

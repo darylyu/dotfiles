@@ -43,23 +43,22 @@ set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**stat
 set wrap
 
 " keyboard mappings
-map <leader>n : execute 'NERDTreeToggle'<CR>
-map <leader>t : execute 'FZF'<CR>
-map <leader>T : TagbarToggle<CR>
-map <leader>s : w<CR>
-map <leader>q : q<CR>
-map <leader>p : execute 'set paste'<CR>
+map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <F5> :Tlist<CR>
 map <leader>P : execute 'set nopaste'<CR>
+map <leader>T : TagbarToggle<CR>
+map <leader>n : execute 'NERDTreeToggle'<CR>
+map <leader>p : execute 'set paste'<CR>
+map <leader>q : q<CR>
+map <leader>s : w<CR>
+map <leader>t : execute 'FZF'<CR>
 
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype js setlocal ts=2 sw=2 sts=2 expandtab
-
-map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
-map <F5> :Tlist<CR>
 
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0

@@ -21,35 +21,26 @@ call SetupVAM()
 VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic github:majutsushi/tagbar
 " use <c-x><c-p> to complete plugin names
 
-
-:set encoding=utf-8
-:set fileencoding=utf-8
-:set ignorecase
-:set smartcase
-
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
 set autoindent
-set ignorecase
-set smartcase
-set nostartofline
+set encoding=utf-8
 set expandtab
+set fileencoding=utf-8
 set hlsearch
-set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**static/*
+set ignorecase
+set laststatus=2  " always display the status line
+set mouse=a  " enable mouse for all modes
+set nostartofline
+set number  " always show the current cursor position
+set ruler  " show the line number
+set shiftwidth=4
+set smartcase
+set smartcase
+set softtabstop=4
+set t_vb=  " disable visual bell
+set tabstop=4
 set tags=./tags;/
+set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**static/*
 set wrap
-
-" always display the status line
-set laststatus=2
-" show the line number
-set ruler
-" disable visual bell
-set t_vb=
-" always show the current cursor position
-set number
-" enable mouse for all modes
-set mouse=a
 
 " keyboard mappings
 map <leader>n : execute 'NERDTreeToggle'<CR>

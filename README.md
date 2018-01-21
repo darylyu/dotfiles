@@ -6,7 +6,7 @@ dotfiles
 - tmux.conf - tmux configuration
 - vimrc - vim configuration that depends on VAM for package management
 - xinitrc - only thing it does is read Xmodmap
-- Xmodmap - only it does is rebind capslock to ctrl
+- Xmodmap - only thing it does is rebind capslock to ctrl
 - xmonad.hs - only thing it does is integrate xmonad with xfce
 - zshrc - zsh config that defers most things to oh-my-zsh
 

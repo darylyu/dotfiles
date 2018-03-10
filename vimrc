@@ -34,7 +34,6 @@ set number  " always show the current cursor position
 set ruler  " show the line number
 set shiftwidth=4
 set smartcase
-set smartcase
 set softtabstop=4
 set t_vb=  " disable visual bell
 set tabstop=4
@@ -45,7 +44,6 @@ set wrap
 " keyboard mappings
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-\> :rightbelow split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <F5> :Tlist<CR>
 map <leader>P : execute 'set nopaste'<CR>
 map <leader>T : TagbarToggle<CR>
 map <leader>n : execute 'NERDTreeToggle'<CR>

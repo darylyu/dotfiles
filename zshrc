@@ -59,7 +59,7 @@ export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git --exclude=*
 # Customize to your needs...
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 PATH=~/Library/Python/2.7/bin:$PATH
-export PATH="~/bin:~/.local/bin:$PATH"
+export PATH="~/bin:~/.local/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='
   (git ls-tree -r --name-only HEAD ||

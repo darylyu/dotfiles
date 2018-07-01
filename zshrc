@@ -10,6 +10,8 @@ ZSH_THEME="dyu"
 # goodbye, missing locale warnings
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Shell aliases
 alias cp="cp -i"

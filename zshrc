@@ -86,4 +86,7 @@ export NVM_DIR="/Users/dyu/.nvm"
 # OPAM(ocaml package manager) configuration
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

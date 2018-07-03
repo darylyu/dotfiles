@@ -20,6 +20,12 @@ alias rm="rm -i"
 alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
 
+if [[ `uname` == 'Darwin' ]]; then
+    alias find="gfind"
+fi
+
+alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactivate ; virtualenv --python=python2.7 ~/.virtualenvs/$1 && workon $1"
+
 source ~/.ssh_aliases
 
 # Uncomment the following line to use case-sensitive completion.

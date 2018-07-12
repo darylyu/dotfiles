@@ -18,7 +18,7 @@ endfun
 
 call SetupVAM()
 " Install vim-nox so you can run Command-T on Linux
-VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic github:majutsushi/tagbar
+VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround github:junegunn/fzf github:vim-syntastic/syntastic github:majutsushi/tagbar vim-airline
 " use <c-x><c-p> to complete plugin names
 
 set autoindent
@@ -67,6 +67,9 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
+
+" vim-airline + tagbar show class name and method name
+let g:airline#extensions#tagbar#flags = 'f'  " show full tag hierarchy
 
 " NERD Tree settings
 let NERDTreeIgnore = ['\.pyc$', 'bower_components', 'node_modules', 'dist$', '__pycache__', 'celerybeat-schedule', '\.retry$', 'htmlcov', '\.bak$']

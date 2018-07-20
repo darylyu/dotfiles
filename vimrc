@@ -40,6 +40,9 @@ set tabstop=4
 set tags=./tags;/
 set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**static/*
 set wrap
+set cursorline
+
+highlight Cursorline cterm=bold
 
 " keyboard mappings
 map <A-\> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>

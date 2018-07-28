@@ -62,7 +62,7 @@ plugins=(vi-mode git python django)
 source $ZSH/oh-my-zsh.sh
 
 # don't include vim swap files, compiled python files, and binary files when using grep
-GREP_OPTIONS='--color=auto --exclude=\.pyc --exclude-dir=.git --exclude=\.swp -I --exclude=tags --exclude-dir=htmlcov --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude=.coverage --exclude=\.po'
+GREP_OPTIONS='--color=auto --exclude=\.pyc --exclude-dir=.git --exclude=\.swp -I --exclude=tags --exclude-dir=htmlcov --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude=.coverage --exclude=\*\.po'
 
 # GREP_OPTIONS is deprecated - using an alias instead.
 alias grep="grep $GREP_OPTIONS"

@@ -51,4 +51,8 @@ tags
 .cache/
 .coverage
 .coverage\.*
+
+# Test artifacts #
+##################
 htmlcov
+.pytest_cache/

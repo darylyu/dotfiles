@@ -22,6 +22,7 @@ VAMActivate matchit.zip vim-addon-commenting The_NERD_tree Supertab surround git
 " use <c-x><c-p> to complete plugin names
 
 set autoindent
+set backspace=indent,eol,start
 set encoding=utf-8
 set expandtab
 set fileencoding=utf-8

@@ -27,6 +27,8 @@ set encoding=utf-8
 set expandtab
 set fileencoding=utf-8
 set hlsearch
+hi Search ctermbg=LightYellow
+hi Search ctermfg=Red
 set ignorecase
 set laststatus=2  " always display the status line
 set mouse=a  " enable mouse for all modes

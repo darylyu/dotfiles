@@ -79,7 +79,10 @@ export FZF_DEFAULT_COMMAND='
 
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+# Instead of checking for the OS here, just make sure that virtualenvwrapper is already installed.
+# In MacOS: it will be in ~/Library/Python/2.7/bin/virtualenvwrapper_lazy.sh
+# In Ubuntu: it will be in /usr/local/bin/virtualenvwrapper_lazy.sh
+source virtualenvwrapper_lazy.sh
 
 export PATH=${PATH}:node_modules/.bin
 

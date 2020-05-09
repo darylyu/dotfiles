@@ -26,7 +26,7 @@ fi
 
 alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactivate ; virtualenv --python=python2.7 ~/.virtualenvs/$1 && workon $1"
 
-source ~/.ssh_aliases
+[ -f ~/.ssh_aliases ] && source ~/.ssh_aliases
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

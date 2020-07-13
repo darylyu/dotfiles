@@ -22,6 +22,8 @@ alias lsvirtualenv="lsvirtualenv -b"
 
 if [[ `uname` == 'Darwin' ]]; then
     alias find="gfind"
+    export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/icu4c/lib"
+    export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/icu4c/include"
 fi
 
 alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactivate ; virtualenv --python=python2.7 ~/.virtualenvs/$1 && workon $1"
@@ -93,6 +95,10 @@ export NVM_DIR="$HOME/.nvm"
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
+
+if [[ `uname` == 'Darwin' ]]; then
+    export PATH="/Applications/Postgres.app/Contents/Versions/11/bin:$PATH"
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

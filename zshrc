@@ -95,7 +95,7 @@ export NVM_DIR="$HOME/.nvm"
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 if [[ `uname` == 'Darwin' ]]; then
     export PATH="/Applications/Postgres.app/Contents/Versions/11/bin:$PATH"

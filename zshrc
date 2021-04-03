@@ -22,8 +22,8 @@ alias lsvirtualenv="lsvirtualenv -b"
 
 if [[ `uname` == 'Darwin' ]]; then
     alias find="gfind"
-    export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/icu4c/lib"
-    export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/icu4c/include"
+    export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/python@3.8/lib -L/opt/homebrew/opt/icu4c/lib"
+    export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/icu4c/include"
 fi
 
 alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactivate ; virtualenv --python=python2.7 ~/.virtualenvs/$1 && workon $1"
@@ -92,6 +92,7 @@ PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 if [[ `uname` == 'Darwin' ]]; then
     PATH=/opt/homebrew/opt/python@3.8/bin:$HOME/Library/Python/3.8/bin:$PATH
+    PATH=/opt/homebrew/opt/postgresql@11/bin:$PATH
     export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/opt/python@3.8/bin/python3.8
 fi
 

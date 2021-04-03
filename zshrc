@@ -71,7 +71,6 @@ alias grep="grep $GREP_OPTIONS"
 
 # Customize to your needs...
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
-PATH=~/Library/Python/2.7/bin:$PATH
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='
@@ -80,12 +79,6 @@ export FZF_DEFAULT_COMMAND='
         sed s/^..//) 2> /dev/null'
 
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
-
-# Instead of checking for the OS here, just make sure that virtualenvwrapper is already installed.
-# In MacOS: it will be in ~/Library/Python/2.7/bin/virtualenvwrapper_lazy.sh
-# In Ubuntu: it will be in /usr/local/bin/virtualenvwrapper_lazy.sh
-source virtualenvwrapper_lazy.sh
-
 export PATH=${PATH}:node_modules/.bin
 
 export NVM_DIR="$HOME/.nvm"
@@ -98,7 +91,13 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 if [[ `uname` == 'Darwin' ]]; then
-    export PATH="/Applications/Postgres.app/Contents/Versions/11/bin:$PATH"
+    PATH=/opt/homebrew/opt/python@3.8/bin:$HOME/Library/Python/3.8/bin:$PATH
+    export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/opt/python@3.8/bin/python3.8
 fi
+
+# Instead of checking for the OS here, just make sure that virtualenvwrapper is already installed.
+# In MacOS: it will be in ~/Library/Python/3.8/bin/virtualenvwrapper_lazy.sh
+# In Ubuntu: it will be in /usr/local/bin/virtualenvwrapper_lazy.sh
+source virtualenvwrapper_lazy.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

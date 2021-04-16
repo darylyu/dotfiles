@@ -45,6 +45,12 @@ set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**stat
 set wrap
 set cursorline
 
+" Allow smart join in PyCharm
+" We do a check here so that plain Vim doesn't raise an error.
+if exists("&ideajoin")
+      :set ideajoin
+endif
+
 highlight Cursorline cterm=bold
 
 " keyboard mappings

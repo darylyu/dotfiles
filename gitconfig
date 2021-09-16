@@ -7,9 +7,10 @@
   br = branch
   co = checkout
   st = status -bs
-  meld = difftool -t meld
-  lol = log --graph --pretty=oneline --abbrev-commit
   far = "!f() { git fetch \"$1\" && git rebase "$1"/\"$2\"; }; f"
+  lol = log --graph --pretty=oneline --abbrev-commit
+  meld = difftool -t meld
+  rebae = rebase
 
 [color]
   ui = true

@@ -91,6 +91,8 @@ export NVM_DIR="$HOME/.nvm"
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 if [[ `uname` == 'Darwin' ]]; then
+    export ANDROID_SDK="$HOME/Library/Android/sdk"
+    PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
     PATH=/opt/homebrew/opt/python@3.8/bin:$HOME/Library/Python/3.8/bin:$PATH
     PATH=/opt/homebrew/opt/postgresql@11/bin:$PATH
     export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/opt/python@3.8/bin/python3.8

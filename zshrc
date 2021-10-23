@@ -104,6 +104,7 @@ export PATH
 # In MacOS: it will be in ~/Library/Python/3.8/bin/virtualenvwrapper_lazy.sh
 # In Ubuntu: it will be in /usr/local/bin/virtualenvwrapper_lazy.sh
 source virtualenvwrapper_lazy.sh
+export PIP_REQUIRE_VIRTUALENV=true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

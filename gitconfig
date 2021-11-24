@@ -6,7 +6,7 @@
 [alias]
   br = branch
   co = checkout
-  dm = "!f() { git branch --merged | egrep -v 'develop|master' | xargs git branch -d; }; f"
+  dm = "!f() { git branch --merged | egrep -v 'develop|master|main' | xargs git branch -d; }; f"
   st = status -bs
   far = "!f() { git fetch \"$1\" && git rebase "$1"/\"$2\"; }; f"
   lol = log --graph --pretty=oneline --abbrev-commit

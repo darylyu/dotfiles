@@ -101,7 +101,7 @@ fi
 export PATH
 
 # Instead of checking for the OS here, just make sure that virtualenvwrapper is already installed.
-# In MacOS: it will be in ~/Library/Python/3.8/bin/virtualenvwrapper_lazy.sh
+# In MacOS: it will be in /opt/homebrew/bin/virtualenvwrapper_lazy.sh
 # In Ubuntu: it will be in /usr/local/bin/virtualenvwrapper_lazy.sh
 source virtualenvwrapper_lazy.sh
 export PIP_REQUIRE_VIRTUALENV=true

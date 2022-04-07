@@ -29,3 +29,5 @@
   required = true
 [diff]
   compactionHeuristic = true
+[init]
+	defaultBranch = main

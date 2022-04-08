@@ -22,6 +22,6 @@ vcs_status() {
     fi
 }
 
-RPS1='${return_code}'
+RPS1='%{$fg[red]%}%~%{$reset_color%} ${return_code}'
 
-PROMPT='[%*] %{$fg[red]%}%~%{$reset_color%} $(vcs_status)$%b '
+PROMPT='[%*] $(vcs_status)$%b '

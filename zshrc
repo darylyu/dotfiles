@@ -84,10 +84,6 @@ PATH=${PATH}:node_modules/.bin
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# OPAM(ocaml package manager) configuration
-. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 if [[ `uname` == 'Darwin' ]]; then

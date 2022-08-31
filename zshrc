@@ -22,7 +22,7 @@ alias lsvirtualenv="lsvirtualenv -b"
 
 if [[ `uname` == 'Darwin' ]]; then
     alias find="gfind"
-    export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/python@3.8/lib -L/opt/homebrew/opt/icu4c/lib"
+    export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/python@3.10/lib -L/opt/homebrew/opt/icu4c/lib"
     export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/icu4c/include"
 fi
 
@@ -86,9 +86,9 @@ PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 if [[ `uname` == 'Darwin' ]]; then
     export ANDROID_SDK="$HOME/Library/Android/sdk"
     PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-    PATH=/opt/homebrew/opt/python@3.8/bin:$HOME/Library/Python/3.8/bin:$PATH
+    PATH=/opt/homebrew/opt/python@3.10/bin:$PATH
     PATH=/opt/homebrew/opt/postgresql@11/bin:$PATH
-    export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/opt/python@3.8/bin/python3.8
+    export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/opt/python@3.10/bin/python3.10
 fi
 
 export PATH

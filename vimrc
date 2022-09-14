@@ -44,6 +44,8 @@ set tags=./tags;/
 set wildignore+=*.pyc,**/node_modules/*,**/bower_components/*,**htmlcov/*,**static/*
 set wrap
 set cursorline
+set noerrorbells
+set visualbell  " This is for PyCharm https://superuser.com/questions/622898/how-to-turn-off-the-bell-sound-in-intellij
 
 " Allow smart join in PyCharm
 " We do a check here so that plain Vim doesn't raise an error.

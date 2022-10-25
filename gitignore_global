@@ -1,6 +1,7 @@
 # Editor swap/temporary files #
 *~
 *.sw[po]
+.idea/
 
 # Compiled source #
 ###################

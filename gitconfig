@@ -12,6 +12,7 @@
   lol = log --graph --pretty=oneline --abbrev-commit
   meld = difftool -t meld
   rebae = rebase
+  dif = diff
 
 [color]
   ui = true

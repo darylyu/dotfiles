@@ -88,6 +88,7 @@ if [[ `uname` == 'Darwin' ]]; then
     PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
     PATH=/opt/homebrew/opt/python@3.10/bin:$PATH
     PATH=/opt/homebrew/opt/postgresql@11/bin:$PATH
+    PATH=$HOME/.docker/bin:$PATH
     export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/opt/python@3.10/bin/python3.10
 fi
 

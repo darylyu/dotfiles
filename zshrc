@@ -91,6 +91,7 @@ PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 if [[ `uname` == 'Darwin' ]]; then
     export ANDROID_SDK="$HOME/Library/Android/sdk"
     PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+    PATH=/opt/homebrew/bin:$PATH
     PATH=/opt/homebrew/opt/python@3.10/bin:$PATH
     PATH=/opt/homebrew/opt/postgresql@11/bin:$PATH
     PATH=$HOME/.docker/bin:$PATH

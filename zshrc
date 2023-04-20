@@ -79,6 +79,11 @@ export FZF_DEFAULT_COMMAND='
         sed s/^..//) 2> /dev/null'
 
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+
 PATH=${PATH}:node_modules/.bin
 
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

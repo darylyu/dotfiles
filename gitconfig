@@ -30,5 +30,6 @@
   required = true
 [diff]
   compactionHeuristic = true
+  wsErrorHighlight = all
 [init]
 	defaultBranch = main

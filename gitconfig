@@ -31,5 +31,6 @@
 [diff]
   compactionHeuristic = true
   wsErrorHighlight = all
+  algorithm = histogram
 [init]
-	defaultBranch = main
+  defaultBranch = main

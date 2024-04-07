@@ -71,7 +71,7 @@ alias grep="grep $GREP_OPTIONS"
 
 # Customize to your needs...
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
-PATH="$HOME/bin:$HOME/.local/bin:/usr/local/opt/python/libexec/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/.pyenv/shims:/usr/local/opt/python/libexec/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='
   (git ls-tree -r --name-only HEAD ||

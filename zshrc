@@ -61,6 +61,7 @@ alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactiv
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(vi-mode git python nvm)
 
+zstyle ':omz:alpha:lib:git' async-prompt no
 source $ZSH/oh-my-zsh.sh
 
 # don't include vim swap files, compiled python files, and binary files when using grep

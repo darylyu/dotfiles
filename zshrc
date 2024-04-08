@@ -112,6 +112,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Use lazy loading for nvm - START
 # It was adding a noticeable delay to a new shell session's startup
 # http://broken-by.me/lazy-load-nvm/

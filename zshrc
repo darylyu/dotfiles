@@ -106,7 +106,8 @@ export PATH
 # Instead of checking for the OS here, just make sure that virtualenvwrapper is already installed.
 # In MacOS: it will be in /opt/homebrew/bin/virtualenvwrapper_lazy.sh
 # In Ubuntu: it will be in /usr/local/bin/virtualenvwrapper_lazy.sh
-source virtualenvwrapper_lazy.sh
+# In Debian: it will be in /usr/share/virtualenvwrapper_lazy.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 export PIP_REQUIRE_VIRTUALENV=true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

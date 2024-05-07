@@ -24,6 +24,7 @@ if [[ `uname` == 'Darwin' ]]; then
     alias find="gfind"
     export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/python@3.10/lib -L/opt/homebrew/opt/icu4c/lib"
     export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/icu4c/include"
+    export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
 alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactivate ; virtualenv --python=python2.7 ~/.virtualenvs/$1 && workon $1"

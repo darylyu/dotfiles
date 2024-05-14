@@ -86,6 +86,8 @@ export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat 
 
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
+eval "$(fzf --zsh)"
+
 PATH=${PATH}:node_modules/.bin
 
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -115,7 +117,6 @@ else
 fi
 export PIP_REQUIRE_VIRTUALENV=true
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Use lazy loading for nvm - START

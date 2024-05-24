@@ -194,3 +194,5 @@ exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 # Use reverse/natural scrolling for ThinkPad trackpad
 exec --no-startup-id xinput set-prop "Elan Touchpad" "libinput Natural Scrolling Enabled" 1
+
+bindsym Mod1+Tab focus right

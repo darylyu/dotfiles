@@ -197,3 +197,6 @@ exec --no-startup-id xinput set-prop "Elan Touchpad" "libinput Natural Scrolling
 
 # Poor man's alt-tab
 bindsym Mod1+Tab focus right
+
+# Lock screen
+bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy

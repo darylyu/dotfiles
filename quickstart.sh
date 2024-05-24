@@ -21,6 +21,9 @@ ln -s -F $PWD/dyu.zsh-theme ~/.oh-my-zsh/themes/dyu.zsh-theme
 echo "Creating symlink ~/.zshrc"
 ln -s -F $PWD/zshrc ~/.zshrc
 
+echo "Creating symlink ~/.config/i3/config"
+ln -s -F $PWD/i3_config ~/.config/i3/config
+
 echo "Cloning https://github.com/tmux-plugins/tpm"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Open tmux and run C-a I to install the tmux plugins"

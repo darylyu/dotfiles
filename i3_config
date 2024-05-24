@@ -200,3 +200,7 @@ bindsym Mod1+Tab focus right
 
 # Lock screen
 bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy
+
+# Use fn F5 and F6 to control screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-

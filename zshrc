@@ -60,7 +60,7 @@ alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactiv
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode git python nvm)
+plugins=(vi-mode git python)
 
 zstyle ':omz:alpha:lib:git' async-prompt no
 source $ZSH/oh-my-zsh.sh
@@ -120,34 +120,6 @@ else
     source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 fi
 export PIP_REQUIRE_VIRTUALENV=true
-
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# Use lazy loading for nvm - START
-# It was adding a noticeable delay to a new shell session's startup
-# http://broken-by.me/lazy-load-nvm/
-nvm() {
-    unset -f nvm
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    nvm "$@"
-}
-
-node() {
-    unset -f node
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    node "$@"
-}
-
-npm() {
-    unset -f npm
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    npm "$@"
-}
-# Use lazy loading for nvm - END
-
 
 if [[ `uname` != 'Darwin' ]]; then
     export PYENV_ROOT="$HOME/.pyenv"

@@ -155,3 +155,5 @@ if [[ `uname` != 'Darwin' ]]; then
     eval "$(pyenv init -)"
     export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 fi
+
+eval "$($HOME/.local/bin/mise activate zsh)"

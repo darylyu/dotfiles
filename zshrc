@@ -27,8 +27,6 @@ if [[ `uname` == 'Darwin' ]]; then
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
-alias fixvirtualenv="find ~/.virtualenvs/$1/ -type l -xtype l -delete && deactivate ; virtualenv --python=python2.7 ~/.virtualenvs/$1 && workon $1"
-
 [ -f ~/.ssh_aliases ] && source ~/.ssh_aliases
 
 # Uncomment the following line to use case-sensitive completion.

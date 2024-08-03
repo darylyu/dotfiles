@@ -52,10 +52,13 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# default: bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# default: bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+o exec --no-startup-id dmenu_run
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -96,9 +99,14 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
+# stacked layout
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# tabbed layout
+# default: bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
+# deault layout
+# default: bindsym $mod+e layout toggle split
+bindsym $mod+d layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle

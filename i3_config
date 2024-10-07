@@ -201,9 +201,6 @@ bar {
 # Bind CapsLock to Ctrl
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 
-# Swap alt with super so the layout is closer to Mac OS
-exec --no-startup-id setxkbmap -option altwin:swap_alt_win
-
 # Use reverse/natural scrolling for ThinkPad trackpad
 exec --no-startup-id xinput set-prop "Elan Touchpad" "libinput Natural Scrolling Enabled" 1
 

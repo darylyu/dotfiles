@@ -34,3 +34,5 @@
   algorithm = histogram
 [init]
   defaultBranch = main
+[push]
+  autoSetupRemote = true

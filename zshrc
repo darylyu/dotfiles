@@ -20,6 +20,17 @@ alias rm="rm -i"
 alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
 
+function reactivate() {
+    # jdx/mise has a bug where it unsets $VIRTUAL_ENV - 2024-10-21
+    # Adding this as a work-around for now.
+    # Get the name of the current virtualenv
+    current_env=$VIRTUAL_ENV_PROMPT
+    # Deactivate the current virtualenv
+    deactivate 2>/dev/null
+    # Reactivate the virtualenv using workon
+    workon "$current_env"
+}
+
 if [[ `uname` == 'Darwin' ]]; then
     alias find="gfind"
     export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L$HOME/.local/share/mise/installs/python/3.10/lib -L/opt/homebrew/opt/icu4c/lib"

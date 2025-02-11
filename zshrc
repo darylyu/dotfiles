@@ -19,6 +19,7 @@ alias mv="mv -i"
 alias rm="rm -i"
 alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
+alias gtfo="git fetch origin && git rebase origin/$1"
 
 function reactivate() {
     # jdx/mise has a bug where it unsets $VIRTUAL_ENV - 2024-10-21

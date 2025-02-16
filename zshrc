@@ -21,6 +21,10 @@ alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
 alias gtfo="git fetch origin && git rebase origin/$1"
 
+# neovim aliases
+alias astrovim="NVIM_APPNAME=astrovim nvim"
+alias lazyvim"NVIM_APPNAME=lazyvim nvim"
+
 function reactivate() {
     # jdx/mise has a bug where it unsets $VIRTUAL_ENV - 2024-10-21
     # Adding this as a work-around for now.

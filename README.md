@@ -1,8 +1,10 @@
 dotfiles
 ========
 
+- astrovim/ - config for AstroVim neovim distribution
 - gitconfig - global git configuration
 - gitignore_global - list of files that git ignores in all repositories
+- lazyvim/ - config for LazyVim neovim distribution
 - tmux.conf - tmux configuration
 - vimrc - vim configuration that depends on VAM for package management
 - xinitrc - only thing it does is read Xmodmap
@@ -11,6 +13,7 @@ dotfiles
 - zshrc - zsh config that defers most things to oh-my-zsh
 
 License
+
 -------
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -80,7 +80,7 @@ zstyle ':omz:alpha:lib:git' async-prompt no
 source $ZSH/oh-my-zsh.sh
 
 # don't include vim swap files, compiled python files, and binary files when using grep
-GREP_OPTIONS='--color=auto --exclude=\.pyc --exclude-dir=.git --exclude=\.swp -I --exclude=tags --exclude-dir=htmlcov --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude=.coverage --exclude-dir=.idea --exclude=\*\.po'
+GREP_OPTIONS='--color=auto --exclude=\.pyc --exclude-dir=.git --exclude=\.swp -I --exclude=tags --exclude-dir=htmlcov --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude=.coverage --exclude-dir=.idea --exclude=\*\.po --exclude-dir=.mypy_cache'
 
 # GREP_OPTIONS is deprecated - using an alias instead.
 alias grep="grep $GREP_OPTIONS"

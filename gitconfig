@@ -36,3 +36,5 @@
   defaultBranch = main
 [push]
   autoSetupRemote = true
+[column]
+	ui = auto

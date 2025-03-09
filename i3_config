@@ -213,3 +213,4 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 default_border none
 default_floating_border none
+hide_edge_borders smart_no_gaps

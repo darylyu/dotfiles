@@ -196,6 +196,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status --config ~/src/dotfiles/i3status.conf
+        position top
 }
 
 # Bind CapsLock to Ctrl

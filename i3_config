@@ -218,3 +218,5 @@ hide_edge_borders smart_no_gaps
 
 gaps inner 12
 gaps outer 0
+
+bindsym Print exec flameshot gui

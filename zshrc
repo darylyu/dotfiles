@@ -19,7 +19,10 @@ alias mv="mv -i"
 alias rm="rm -i"
 alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
-alias gtfo="git fetch origin && git rebase origin/$1"
+
+gtfo() {
+    git fetch origin && git rebase origin/$1
+}
 
 # neovim aliases
 alias astrovim="NVIM_APPNAME=astrovim nvim"

@@ -26,7 +26,7 @@ gtfo() {
 
 # neovim aliases
 alias astrovim="NVIM_APPNAME=astrovim nvim"
-alias lazyvim"NVIM_APPNAME=lazyvim nvim"
+alias lazyvim="NVIM_APPNAME=lazyvim nvim"
 
 function reactivate() {
     # jdx/mise has a bug where it unsets $VIRTUAL_ENV - 2024-10-21

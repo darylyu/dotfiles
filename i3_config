@@ -9,6 +9,14 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Color shemes for windows
+set $bgcolor    #000000
+set $in-bgcolor #000000
+set $text       #ffffff
+set $u-bgcolor  #ff3333
+set $indicator  #a8a3c1
+set $in-text    #969696
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -197,6 +205,14 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
         position top
+        colors {
+            separator #000000
+            background $bgcolor
+            #                       border          background      text
+            focused_workspace       #000000         #ff0000         $text
+            inactive_workspace      $in-bgcolor     $in-bgcolor     $text
+            urgent_workspace        $u-bgcolor      $u-bgcolor      $text
+        }
 }
 
 # Bind CapsLock to Ctrl
@@ -212,11 +228,15 @@ bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-default_border none
-default_floating_border none
-hide_edge_borders smart_no_gaps
+default_border normal
+default_floating_border normal
+hide_edge_borders smart
 
 gaps inner 0
 gaps outer 0
 
 bindsym Print exec flameshot gui
+
+#                  <border>    <background>  <text>   <indicator>  <child_border>
+client.focused     $u-bgcolor  $u-bgcolor    $text    #0000ff      $u-bgcolor
+client.unfocused   #333333     #222222       #888888  #292d2e      #222222

@@ -51,10 +51,11 @@ ehthumbs.db
 Thumbs.db
 tags
 .cache/
-.coverage
-.coverage\.*
+mise.toml
 
 # Test artifacts #
 ##################
 htmlcov
 .pytest_cache/
+.coverage
+.coverage\.*

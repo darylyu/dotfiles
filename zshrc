@@ -138,4 +138,7 @@ else
 fi
 export PIP_REQUIRE_VIRTUALENV=true
 
+export GTK_CSD=0
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
 eval "$($HOME/.local/bin/mise activate zsh)"

@@ -54,7 +54,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -232,8 +232,8 @@ default_border normal
 default_floating_border normal
 hide_edge_borders smart
 
-gaps inner 0
-gaps outer 0
+gaps inner 4
+gaps outer 4
 
 bindsym Print exec flameshot gui
 

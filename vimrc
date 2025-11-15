@@ -93,7 +93,7 @@ let g:syntastic_python_checkers = ['flake8']
 let g:airline#extensions#tagbar#flags = 'f'  " show full tag hierarchy
 
 " match airline's theme with shell's theme
-let g:airline_theme='solarized'
+let g:airline_theme='simple'
 
 
 " NERD Tree settings

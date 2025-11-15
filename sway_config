@@ -26,10 +26,18 @@ bindcode $mod+32 exec "rofi -modi drun,run -show drun"
 
 include /etc/sway/config-vars.d/*
 
+# colors
+set $bgcolor    #000000
+set $in-bgcolor #000000
+set $text       #ffffff
+set $u-bgcolor  #ff3333
+set $indicator  #a8a3c1
+set $in-text    #969696
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -211,17 +219,25 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    status_command i3blocks
     position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        separator #000000
+        background $bgcolor
+        #                       border          background      text
+        focused_workspace       #000000         #ff0000         $text
+        inactive_workspace      $in-bgcolor     $in-bgcolor     $text
+        urgent_workspace        $u-bgcolor      $u-bgcolor      $text
     }
 }
+
+#                  <border>    <background>  <text>   <indicator>  <child_border>
+client.focused     $u-bgcolor  $u-bgcolor    $text    #ff0000      $u-bgcolor
+client.unfocused   #333333     #222222       #888888  #292d2e      #222222
+
+default_border none
+default_floating_border none
+gaps inner 0
+gaps outer 0
 
 include /etc/sway/config.d/*

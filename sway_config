@@ -18,7 +18,11 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+# A more modern dmenu replacement is rofi:
+# default: bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindcode $mod+32 exec "rofi -modi drun,run -show drun"
 
 include /etc/sway/config-vars.d/*
 

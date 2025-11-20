@@ -23,6 +23,7 @@ set $term foot
 # A more modern dmenu replacement is rofi:
 # default: bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 bindcode $mod+32 exec "rofi -modi drun,run -show drun"
+bindsym $mod+space exec rofi -show run
 
 include /etc/sway/config-vars.d/*
 
@@ -105,6 +106,7 @@ input * {
 
     # Poor man's alt-tab
     bindsym Mod1+Tab focus right
+    bindsym $mod+Tab focus right
 
     # Lock screen
     bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy
@@ -197,7 +199,7 @@ input * {
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    # bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent

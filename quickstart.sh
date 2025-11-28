@@ -30,6 +30,9 @@ ln -s -F $PWD/tigrc ~/.tigrc
 echo "Creating symlink ~/.config/i3/config"
 ln -s -F $PWD/i3_config ~/.config/i3/config
 
+echo "Creating symlink ~/.config/sway/config"
+ln -s -F $PWD/sway_config ~/.config/sway/config
+
 echo "Cloning https://github.com/tmux-plugins/tpm"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Open tmux and run C-a I to install the tmux plugins"

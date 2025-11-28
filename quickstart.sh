@@ -24,6 +24,9 @@ ln -s -F $PWD/zshrc ~/.zshrc
 echo "Creating symlink ~/.zshenv"
 ln -s -F $PWD/zshenv ~/.zshenv
 
+echo "Creating symlink ~/.tigrc"
+ln -s -F $PWD/tigrc ~/.tigrc
+
 echo "Creating symlink ~/.config/i3/config"
 ln -s -F $PWD/i3_config ~/.config/i3/config
 

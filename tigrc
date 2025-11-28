@@ -1,0 +1,5 @@
+set main-view = \
+    id \
+    date:custom,format="%b %d %H:%M %z" \
+    author:full,width=8 \
+    commit-title:yes,graph,refs,overflow=no

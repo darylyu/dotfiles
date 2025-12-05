@@ -259,8 +259,8 @@ bar {
 client.focused     $u-bgcolor  $u-bgcolor    $text    #ff0000      $u-bgcolor
 client.unfocused   #333333     #222222       #888888  #292d2e      #222222
 
-default_border none
-default_floating_border none
+default_border pixel
+default_floating_border pixel
 gaps inner 0
 gaps outer 0
 

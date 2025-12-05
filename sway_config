@@ -73,6 +73,7 @@ exec swayidle -w \
 input * {
     xkb_options caps:ctrl_modifier
     natural_scroll enabled
+    tap enabled
 }
 
 ### Key bindings

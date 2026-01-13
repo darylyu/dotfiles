@@ -17,6 +17,7 @@ export LC_ALL=en_US.UTF-8
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+alias brgrep="git branch | grep $1"
 alias hgrep="history | grep $1"
 alias lsvirtualenv="lsvirtualenv -b"
 

@@ -42,7 +42,7 @@ function reactivate() {
 
 if [[ `uname` == 'Darwin' ]]; then
     alias find="gfind"
-    export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L$HOME/.local/share/mise/installs/python/3.10/lib -L/opt/homebrew/opt/icu4c/lib"
+    export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L$HOME/.local/share/mise/installs/python/3.11/lib -L/opt/homebrew/opt/icu4c/lib"
     export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/icu4c/include"
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
@@ -118,7 +118,7 @@ if [[ `uname` == 'Darwin' ]]; then
     export ANDROID_SDK="$HOME/Library/Android/sdk"
     PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
     PATH=/opt/homebrew/bin:$PATH
-    PATH=/opt/homebrew/opt/python@3.10/bin:$PATH
+    # PATH=/opt/homebrew/opt/python@3.10/bin:$PATH
     PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
     PATH=$HOME/.docker/bin:$PATH
     export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/opt/python@3.10/bin/python3.10

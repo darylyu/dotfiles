@@ -142,4 +142,5 @@ export PIP_REQUIRE_VIRTUALENV=true
 export GTK_CSD=0
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 
-eval "$($HOME/.local/bin/mise activate zsh)"
+# Don't auto-activate mise because it unsets the virtualenv when changing dirs
+# eval "$($HOME/.local/bin/mise activate zsh)"

@@ -232,8 +232,8 @@ default_border normal
 default_floating_border normal
 hide_edge_borders smart
 
-gaps inner 4
-gaps outer 4
+gaps inner 2
+gaps outer 0
 
 bindsym Print exec flameshot gui
 

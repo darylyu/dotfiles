@@ -59,3 +59,5 @@ htmlcov
 .pytest_cache/
 .coverage
 .coverage\.*
+
+**/.claude/settings.local.json

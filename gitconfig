@@ -2,7 +2,7 @@
   excludesfile = ~/.gitignore_global
   editor = vim
   pager = less -F -X
-  ignorecase = false
+  ignorecase = true
 
 [alias]
   br = branch

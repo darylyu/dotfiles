@@ -44,6 +44,7 @@ if [[ `uname` == 'Darwin' ]]; then
     alias find="gfind"
     export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L$HOME/.local/share/mise/installs/python/3.11/lib -L/opt/homebrew/opt/icu4c/lib"
     export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/icu4c/include"
+    export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_FALLBACK_LIBRARY_PATH
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 

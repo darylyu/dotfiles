@@ -51,6 +51,7 @@ ehthumbs.db
 Thumbs.db
 tags
 .cache/
+.claude/
 mise.toml
 
 # Test artifacts #

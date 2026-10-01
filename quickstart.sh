@@ -29,9 +29,6 @@ link zshenv ~/.zshenv
 
 # OS-specific
 case "$(uname)" in
-    Darwin)
-        link aerospace.toml ~/.aerospace.toml
-        ;;
     Linux)
         link i3_config ~/.config/i3/config
         link i3status.conf ~/.config/i3status/config

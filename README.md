@@ -17,7 +17,6 @@ Shared
 - zsh/themes/dyu.zsh-theme - oh-my-zsh theme (zshrc sets `ZSH_CUSTOM` to zsh/)
 
 macOS
-- aerospace.toml - AeroSpace window manager config
 - obinskit_kb_layout.json - ObinsKit keyboard layout
 
 Linux

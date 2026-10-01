@@ -1,16 +1,30 @@
 dotfiles
 ========
 
-- astrovim/ - config for AstroVim neovim distribution
+Run `./quickstart.sh` to symlink everything into place. It detects macOS vs Linux.
+
+Shared
+- astrovim/ - config for AstroVim neovim distribution (`~/.config/astrovim`)
 - gitconfig - global git configuration
 - gitignore_global - list of files that git ignores in all repositories
-- lazyvim/ - config for LazyVim neovim distribution
+- lazyvim/ - config for LazyVim neovim distribution (`~/.config/lazyvim`)
+- tigrc - tig configuration
 - tmux.conf - tmux configuration
-- vimrc - vim configuration that depends on VAM for package management
-- xinitrc - only thing it does is read Xmodmap
-- Xmodmap - only thing it does is rebind capslock to ctrl
-- xmonad.hs - only thing it does is integrate xmonad with xfce
-- zshrc - zsh config that defers most things to oh-my-zsh
+- vimrc - vim configuration
+- zshrc - zsh config shared by all OSes; defers most things to oh-my-zsh
+- zshenv - sources rustup's cargo env
+- zsh/os/darwin.zsh, zsh/os/linux.zsh - OS-specific zsh settings, sourced by zshrc
+- zsh/themes/dyu.zsh-theme - oh-my-zsh theme (zshrc sets `ZSH_CUSTOM` to zsh/)
+
+macOS
+- aerospace.toml - AeroSpace window manager config
+- obinskit_kb_layout.json - ObinsKit keyboard layout
+
+Linux
+- i3_config, i3status.conf - i3 window manager and status bar
+- sway_config - sway window manager
+- foot.ini - foot terminal
+- x11-40-libinput.conf - copy to /etc/X11/xorg.conf.d/40-libinput.conf
 
 License
 

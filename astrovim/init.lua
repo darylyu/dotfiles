@@ -18,7 +18,5 @@ end
 require "lazy_setup"
 require "polish"
 
-require "user.heirline_tabs"
-
 vim.opt.number = true
 vim.opt.relativenumber = false

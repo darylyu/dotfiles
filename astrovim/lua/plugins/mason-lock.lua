@@ -7,7 +7,9 @@ return {
   -- Last commit that works with mason.nvim v1 (AstroNvim v4 pins mason to v1.x)
   commit = "86614f76c3442fba1c5c8d79aa1efcb3ad69de1c",
   dependencies = { "williamboman/mason.nvim" },
-  init = function()
+  -- Load after startup so Mason isn't pulled in before the first screen draws
+  event = "VeryLazy",
+  config = function()
     require("mason-lock").setup {
       lockfile_path = vim.fn.stdpath "config" .. "/mason-lock.json",
     }

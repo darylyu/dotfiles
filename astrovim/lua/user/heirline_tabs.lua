@@ -1,6 +1,6 @@
-local heirline = require "heirline"
-
-heirline.setup {
+-- Replaces AstroNvim's heirline tabline and statusline (see lua/plugins/heirline.lua).
+-- AstroNvim's winbar and statuscolumn are kept.
+return {
   -- Tabline shows real tabs
   tabline = {
     -- Iterate over actual tabs

@@ -1,0 +1,13 @@
+{
+  "basedpyright": "1.40.1",
+  "black": "26.5.1",
+  "codelldb": "v1.12.3",
+  "debugpy": "1.8.22",
+  "isort": "9.0.2",
+  "lua-language-server": "3.19.1",
+  "pyright": "1.1.408",
+  "selene": "0.31.0",
+  "stylua": "v2.5.2",
+  "taplo": "0.10.0",
+  "typescript-language-server": "5.1.3"
+}

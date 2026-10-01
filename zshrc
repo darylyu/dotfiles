@@ -12,7 +12,6 @@ ZSH_CUSTOM=$DOTFILES/zsh
 ZSH_THEME="dyu"
 plugins=(vi-mode git python)
 
-zstyle ':omz:alpha:lib:git' async-prompt no
 source $ZSH/oh-my-zsh.sh
 
 # Shell aliases

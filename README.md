@@ -4,6 +4,7 @@ dotfiles
 Run `./quickstart.sh` to symlink everything into place. It detects macOS vs Linux.
 
 Shared
+- agents_global.md - rules for coding agents (`~/.claude/CLAUDE.md`, `~/.copilot/copilot-instructions.md`)
 - astrovim/ - config for AstroVim neovim distribution (`~/.config/astrovim`)
 - gitconfig - global git configuration
 - gitignore_global - list of files that git ignores in all repositories

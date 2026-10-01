@@ -1,10 +1,6 @@
 # AGENTS.md
 
-## Rules
-- Do not commit, push, or amend unless I explicitly ask in that message. Approving a plan is not permission to commit.
-- Keep changes minimal. Only touch what the task needs.
-- Don't reformat, rename, or "clean up" code you weren't asked to change.
-- Ask before deleting files or changing anything outside this repo (like files in `~`).
+Follow the rules in `agents_global.md`.
 
 ## Layout
 - `zshrc`: shared zsh config. OS-specific settings go in `zsh/os/darwin.zsh` or `zsh/os/linux.zsh`, not in `zshrc`.

@@ -18,6 +18,8 @@ link vimrc ~/.vimrc
 link tigrc ~/.tigrc
 link astrovim ~/.config/astrovim
 link lazyvim ~/.config/lazyvim
+link agents_global.md ~/.claude/CLAUDE.md
+link agents_global.md ~/.copilot/copilot-instructions.md
 
 if [ ! -d ~/.oh-my-zsh ]; then
     echo "Installing oh-my-zsh"

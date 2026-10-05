@@ -5,5 +5,4 @@ ZSH_THEME_GIT_PROMPT_CLEAN="]%{$reset_color%} "
 
 RPS1='%{$fg[red]%}%~%{$reset_color%} ${return_code}'
 
-# oh-my-zsh only runs git_prompt_info in the background if it appears literally in PROMPT
 PROMPT='[%*] $(git_prompt_info)$%b '

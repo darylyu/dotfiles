@@ -1,12 +1,21 @@
 {
   "basedpyright": "1.40.2",
-  "black": "26.10.0",
+  "bash-debug-adapter": "untagged-438733f35feb8659d939",
+  "black": "26.10.1",
   "codelldb": "v1.12.3",
+  "copilot-language-server": "1.398.0",
   "debugpy": "1.8.22",
   "isort": "9.0.2",
+  "js-debug-adapter": "v1.117.0",
+  "json-lsp": "4.10.0",
   "lua-language-server": "3.19.1",
+  "rust-analyzer": "2026-07-20",
   "selene": "0.32.0",
+  "shellcheck": "v0.11.0",
+  "shfmt": "v3.13.1",
+  "sqlfluff": "4.2.2",
   "stylua": "v2.5.2",
   "taplo": "0.10.0",
-  "tree-sitter-cli": "v0.27.1"
+  "tree-sitter-cli": "v0.27.1",
+  "typescript-language-server": "5.1.3"
 }

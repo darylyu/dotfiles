@@ -42,6 +42,13 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Apply the matching autorandr profile on login and on i3 reload/restart.
+# Hotplug is handled by autorandr's udev rule. Unknown setups fall back to side-by-side.
+exec_always --no-startup-id autorandr --change --default horizontal
+# Re-run autorandr when the lid opens or closes. With the lid closed and an external
+# screen attached, autorandr turns off the laptop screen and i3 moves its workspaces over.
+exec --no-startup-id sh -c 'f=$(echo /proc/acpi/button/lid/*/state); prev=$(cat $f); while sleep 2; do cur=$(cat $f); [ "$cur" != "$prev" ] && autorandr --change --default horizontal; prev=$cur; done'
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status

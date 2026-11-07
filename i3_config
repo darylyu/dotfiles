@@ -253,6 +253,13 @@ bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && $osd brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && $osd brightness
 
+# Float pop-ups and small tool windows instead of tiling them.
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="GtkFileChooserDialog"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="steam" title="^Friends List$"] floating enable
+
 # Thin borders. Tabbed and stacked layouts still show titles.
 default_border pixel 2
 default_floating_border pixel 2

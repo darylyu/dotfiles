@@ -21,8 +21,18 @@ macOS
 - obinskit_kb_layout.json - ObinsKit keyboard layout
 
 Linux
-- i3_config, i3status.conf - i3 window manager and status bar
+- i3_config - i3 window manager
   - needs `autorandr` to switch screen layouts on hotplug; save layouts with `autorandr --save <name>`
+- i3_osd.sh - volume and brightness pop-ups for the i3 media keys
+- i3_lang.sh - shows and switches the IBus input method, for the i3 bar and `$mod+i`
+- picom.conf - picom compositor for i3 (shadows, fades, rounded corners)
+- i3blocks.conf - i3 status bar blocks; scripts come from i3blocks-contrib, which quickstart.sh clones
+- kitty.conf - kitty terminal, opened by i3
+- dunstrc - dunst notifications
+- rofi_power_menu.sh - rofi power menu, opened by `$mod+Shift+e`
+- gsimplecal_config - small calendar, opened by clicking the date in the i3 bar (needs `gsimplecal`)
+- needs `hsetroot` for the i3 background colour
+- volumeicon.conf - volume icon in the i3 tray (needs `volumeicon-alsa`)
 - sway_config - sway window manager
 - foot.ini - foot terminal
 - x11-40-libinput.conf - copy to /etc/X11/xorg.conf.d/40-libinput.conf

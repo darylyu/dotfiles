@@ -1,0 +1,17 @@
+# gsimplecal, the small calendar opened by left-clicking the date in the i3 bar.
+# Double-click a day to open it in GNOME Calendar. See `man gsimplecal`.
+
+show_calendar = 1
+show_timezones = 0
+mark_today = 1
+show_week_numbers = 0
+close_on_unfocus = 1
+external_viewer = gnome-calendar --date "%Y-%m-%d"
+
+mainwindow_decorated = 0
+mainwindow_keep_above = 1
+mainwindow_skip_taskbar = 1
+mainwindow_resizable = 0
+mainwindow_position = mouse
+# Opened from the bar, the window gets pushed to the top of the screen; move it below the bar.
+mainwindow_yoffset = 30

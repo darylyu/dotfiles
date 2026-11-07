@@ -10,12 +10,15 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Color shemes for windows
-set $bgcolor    #000000
-set $in-bgcolor #000000
-set $text       #ffffff
-set $u-bgcolor  #ff3333
-set $indicator  #a8a3c1
-set $in-text    #969696
+# Gruvbox dark, to match rofi
+set $bg         #282828
+set $bg-dark    #1d2021
+set $bg-light   #3c3836
+set $text       #ebdbb2
+set $in-text    #a89984
+set $accent     #d65d0e
+set $indicator  #fe8019
+set $urgent     #cc241d
 
 set $mod Mod4
 
@@ -36,11 +39,20 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+# Compositor: no tearing, plus shadows, fades and rounded corners. See picom.conf.
+exec --no-startup-id picom
+
+# Notifications. See dunstrc.
+exec --no-startup-id dunst
+
+# Solid gruvbox background. hsetroot (not xsetroot) so picom can see it.
+exec_always --no-startup-id hsetroot -solid '#282828'
 
 # Apply the matching autorandr profile on login and on i3 reload/restart.
 # Hotplug is handled by autorandr's udev rule. Unknown setups fall back to side-by-side.
@@ -49,12 +61,23 @@ exec_always --no-startup-id autorandr --change --default horizontal
 # screen attached, autorandr turns off the laptop screen and i3 moves its workspaces over.
 exec --no-startup-id sh -c 'f=$(echo /proc/acpi/button/lid/*/state); prev=$(cat $f); while sleep 2; do cur=$(cat $f); [ "$cur" != "$prev" ] && autorandr --change --default horizontal; prev=$cur; done'
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Volume icon in the tray: click for a slider, scroll to change, middle-click to mute.
+# See volumeicon.conf.
+exec --no-startup-id volumeicon
+
+# Use pactl to adjust volume in PulseAudio. Show the new level in a pop-up (see i3_osd.sh).
+set $osd ~/.config/i3/osd.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $osd volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $osd volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $osd volume
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $osd mic
+
+# Switch IBus input method (English / Pinyin) and update the bar's lang block (signal 11).
+# The bar block replaces IBus's tray icon, whose menu opens on the wrong side of the screen.
+bindsym $mod+i exec --no-startup-id ~/.config/i3/lang.sh toggle && pkill -RTMIN+11 i3blocks
+exec --no-startup-id gsettings set org.freedesktop.ibus.panel show-icon-on-systray false
+# Keep IBus from resetting the keyboard layout on switch, which drops CapsLock-as-Ctrl.
+exec --no-startup-id gsettings set org.freedesktop.ibus.general use-system-keyboard-layout true
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -64,7 +87,7 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 # default: bindsym $mod+Shift+q kill
@@ -178,7 +201,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# power menu: lock, log out, suspend, reboot, shut down. See rofi_power_menu.sh.
+bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/power-menu.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -212,13 +236,16 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
         position top
+        font pango:FiraMono Nerd Font Propo 11
         colors {
-            separator #000000
-            background $bgcolor
+            separator $bg-light
+            background $bg-dark
+            statusline $text
             #                       border          background      text
-            focused_workspace       #000000         #ff0000         $text
-            inactive_workspace      $in-bgcolor     $in-bgcolor     $text
-            urgent_workspace        $u-bgcolor      $u-bgcolor      $text
+            focused_workspace       $accent         $accent         $bg-dark
+            active_workspace        $bg-light       $bg-light       $text
+            inactive_workspace      $bg-dark        $bg-dark        $in-text
+            urgent_workspace        $urgent         $urgent         $text
         }
 }
 
@@ -232,18 +259,33 @@ bindsym Mod1+Tab focus right
 bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy
 
 # Use fn F5 and F6 to control screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && $osd brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && $osd brightness
 
-default_border normal
-default_floating_border normal
+# Float pop-ups and small tool windows instead of tiling them.
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="GtkFileChooserDialog"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Gsimplecal"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="steam" title="^Friends List$"] floating enable
+
+# Thin borders. Tabbed and stacked layouts still show titles.
+default_border pixel 2
+default_floating_border pixel 2
 hide_edge_borders smart
+title_align center
 
-gaps inner 2
+gaps inner 6
 gaps outer 0
+smart_gaps on
 
 bindsym Print exec flameshot gui
 
-#                  <border>    <background>  <text>   <indicator>  <child_border>
-client.focused     $u-bgcolor  $u-bgcolor    $text    #0000ff      $u-bgcolor
-client.unfocused   #333333     #222222       #888888  #292d2e      #222222
+#                       <border>    <background>  <text>     <indicator>  <child_border>
+client.focused          $accent     $accent       $bg-dark   $indicator   $accent
+client.focused_inactive $bg-light   $bg-light     $text      $bg-light    $bg-light
+client.unfocused        $bg         $bg           $in-text   $bg          $bg
+client.urgent           $urgent     $urgent       $text      $urgent      $urgent
+client.placeholder      $bg-dark    $bg-dark      $text      $bg-dark     $bg-dark
+client.background       $bg

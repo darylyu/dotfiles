@@ -33,7 +33,19 @@ link zshenv ~/.zshenv
 case "$(uname)" in
     Linux)
         link i3_config ~/.config/i3/config
-        link i3status.conf ~/.config/i3status/config
+        link i3_osd.sh ~/.config/i3/osd.sh
+        link i3_lang.sh ~/.config/i3/lang.sh
+        link picom.conf ~/.config/picom/picom.conf
+        link kitty.conf ~/.config/kitty/kitty.conf
+        link dunstrc ~/.config/dunst/dunstrc
+        link rofi_power_menu.sh ~/.config/rofi/power-menu.sh
+        link gsimplecal_config ~/.config/gsimplecal/config
+        link volumeicon.conf ~/.config/volumeicon/volumeicon
+        if [ ! -d ~/.config/i3blocks/.git ]; then
+            echo "Cloning https://github.com/vivien/i3blocks-contrib"
+            git clone https://github.com/vivien/i3blocks-contrib ~/.config/i3blocks
+        fi
+        link i3blocks.conf ~/.config/i3blocks/config
         link sway_config ~/.config/sway/config
         link foot.ini ~/.config/foot/foot.ini
         echo "To configure libinput under X11, run:"

@@ -236,6 +236,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
         position top
+        padding 3px 0
         font pango:FiraMono Nerd Font Propo 11
         colors {
             separator $bg-light

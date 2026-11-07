@@ -5,7 +5,7 @@
     follow = mouse
     origin = top-right
     # Below the bar, lined up with the i3 gaps
-    offset = 12x36
+    offset = 12x42
     width = 360
     height = 160
     gap_size = 6

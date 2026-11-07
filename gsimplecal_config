@@ -13,3 +13,5 @@ mainwindow_keep_above = 1
 mainwindow_skip_taskbar = 1
 mainwindow_resizable = 0
 mainwindow_position = mouse
+# Opened from the bar, the window gets pushed to the top of the screen; move it below the bar.
+mainwindow_yoffset = 30

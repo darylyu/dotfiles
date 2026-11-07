@@ -70,6 +70,13 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $osd volume && $refresh_vol
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $osd mic
 
+# Switch IBus input method (English / Pinyin) and update the bar's lang block (signal 11).
+# The bar block replaces IBus's tray icon, whose menu opens on the wrong side of the screen.
+bindsym $mod+i exec --no-startup-id ~/.config/i3/lang.sh toggle && pkill -RTMIN+11 i3blocks
+exec --no-startup-id gsettings set org.freedesktop.ibus.panel show-icon-on-systray false
+# Keep IBus from resetting the keyboard layout on switch, which drops CapsLock-as-Ctrl.
+exec --no-startup-id gsettings set org.freedesktop.ibus.general use-system-keyboard-layout true
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

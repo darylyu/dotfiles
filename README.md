@@ -24,6 +24,7 @@ Linux
 - i3_config - i3 window manager
   - needs `autorandr` to switch screen layouts on hotplug; save layouts with `autorandr --save <name>`
 - i3_osd.sh - volume and brightness pop-ups for the i3 media keys
+- i3_lang.sh - shows and switches the IBus input method, for the i3 bar and `$mod+i`
 - picom.conf - picom compositor for i3 (shadows, fades, rounded corners)
 - i3blocks.conf - i3 status bar blocks; scripts come from i3blocks-contrib, which quickstart.sh clones
 - kitty.conf - kitty terminal, opened by i3

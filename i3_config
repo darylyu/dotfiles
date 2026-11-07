@@ -10,12 +10,15 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Color shemes for windows
-set $bgcolor    #000000
-set $in-bgcolor #000000
-set $text       #ffffff
-set $u-bgcolor  #ff3333
-set $indicator  #a8a3c1
-set $in-text    #969696
+# Gruvbox dark, to match rofi
+set $bg         #282828
+set $bg-dark    #1d2021
+set $bg-light   #3c3836
+set $text       #ebdbb2
+set $in-text    #a89984
+set $accent     #d65d0e
+set $indicator  #fe8019
+set $urgent     #cc241d
 
 set $mod Mod4
 
@@ -36,7 +39,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -212,13 +215,16 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
         position top
+        font pango:FiraMono Nerd Font Propo 11
         colors {
-            separator #000000
-            background $bgcolor
+            separator $bg-light
+            background $bg-dark
+            statusline $text
             #                       border          background      text
-            focused_workspace       #000000         #ff0000         $text
-            inactive_workspace      $in-bgcolor     $in-bgcolor     $text
-            urgent_workspace        $u-bgcolor      $u-bgcolor      $text
+            focused_workspace       $accent         $accent         $bg-dark
+            active_workspace        $bg-light       $bg-light       $text
+            inactive_workspace      $bg-dark        $bg-dark        $in-text
+            urgent_workspace        $urgent         $urgent         $text
         }
 }
 
@@ -235,15 +241,22 @@ bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-default_border normal
-default_floating_border normal
+# Thin borders. Tabbed and stacked layouts still show titles.
+default_border pixel 2
+default_floating_border pixel 2
 hide_edge_borders smart
+title_align center
 
-gaps inner 2
+gaps inner 6
 gaps outer 0
+smart_gaps on
 
 bindsym Print exec flameshot gui
 
-#                  <border>    <background>  <text>   <indicator>  <child_border>
-client.focused     $u-bgcolor  $u-bgcolor    $text    #0000ff      $u-bgcolor
-client.unfocused   #333333     #222222       #888888  #292d2e      #222222
+#                       <border>    <background>  <text>     <indicator>  <child_border>
+client.focused          $accent     $accent       $bg-dark   $indicator   $accent
+client.focused_inactive $bg-light   $bg-light     $text      $bg-light    $bg-light
+client.unfocused        $bg         $bg           $in-text   $bg          $bg
+client.urgent           $urgent     $urgent       $text      $urgent      $urgent
+client.placeholder      $bg-dark    $bg-dark      $text      $bg-dark     $bg-dark
+client.background       $bg

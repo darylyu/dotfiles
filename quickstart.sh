@@ -33,7 +33,6 @@ link zshenv ~/.zshenv
 case "$(uname)" in
     Linux)
         link i3_config ~/.config/i3/config
-        link i3status.conf ~/.config/i3status/config
         link picom.conf ~/.config/picom/picom.conf
         link kitty.conf ~/.config/kitty/kitty.conf
         link dunstrc ~/.config/dunst/dunstrc

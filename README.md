@@ -21,7 +21,7 @@ macOS
 - obinskit_kb_layout.json - ObinsKit keyboard layout
 
 Linux
-- i3_config, i3status.conf - i3 window manager and status bar
+- i3_config - i3 window manager
   - needs `autorandr` to switch screen layouts on hotplug; save layouts with `autorandr --save <name>`
 - picom.conf - picom compositor for i3 (shadows, fades, rounded corners)
 - i3blocks.conf - i3 status bar blocks; scripts come from i3blocks-contrib, which quickstart.sh clones

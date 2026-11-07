@@ -37,6 +37,7 @@ case "$(uname)" in
         link picom.conf ~/.config/picom/picom.conf
         link kitty.conf ~/.config/kitty/kitty.conf
         link dunstrc ~/.config/dunst/dunstrc
+        link rofi_power_menu.sh ~/.config/rofi/power-menu.sh
         if [ ! -d ~/.config/i3blocks/.git ]; then
             echo "Cloning https://github.com/vivien/i3blocks-contrib"
             git clone https://github.com/vivien/i3blocks-contrib ~/.config/i3blocks

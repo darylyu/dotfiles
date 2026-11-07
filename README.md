@@ -27,6 +27,7 @@ Linux
 - i3blocks.conf - i3 status bar blocks; scripts come from i3blocks-contrib, which quickstart.sh clones
 - kitty.conf - kitty terminal, opened by i3
 - dunstrc - dunst notifications
+- rofi_power_menu.sh - rofi power menu, opened by `$mod+Shift+e`
 - needs `hsetroot` for the i3 background colour
 - sway_config - sway window manager
 - foot.ini - foot terminal

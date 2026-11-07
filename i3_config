@@ -61,13 +61,15 @@ exec_always --no-startup-id autorandr --change --default horizontal
 # screen attached, autorandr turns off the laptop screen and i3 moves its workspaces over.
 exec --no-startup-id sh -c 'f=$(echo /proc/acpi/button/lid/*/state); prev=$(cat $f); while sleep 2; do cur=$(cat $f); [ "$cur" != "$prev" ] && autorandr --change --default horizontal; prev=$cur; done'
 
-# Use pactl to adjust volume in PulseAudio. Show the new level in a pop-up (see i3_osd.sh)
-# and update the bar's vol block (signal 10 in i3blocks.conf).
+# Volume icon in the tray: click for a slider, scroll to change, middle-click to mute.
+# See volumeicon.conf.
+exec --no-startup-id volumeicon
+
+# Use pactl to adjust volume in PulseAudio. Show the new level in a pop-up (see i3_osd.sh).
 set $osd ~/.config/i3/osd.sh
-set $refresh_vol pkill -RTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $osd volume && $refresh_vol
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $osd volume && $refresh_vol
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $osd volume && $refresh_vol
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $osd volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $osd volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $osd volume
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $osd mic
 
 # Switch IBus input method (English / Pinyin) and update the bar's lang block (signal 11).

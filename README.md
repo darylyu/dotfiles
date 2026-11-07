@@ -32,6 +32,7 @@ Linux
 - rofi_power_menu.sh - rofi power menu, opened by `$mod+Shift+e`
 - gsimplecal_config - small calendar, opened by clicking the date in the i3 bar (needs `gsimplecal`)
 - needs `hsetroot` for the i3 background colour
+- volumeicon.conf - volume icon in the i3 tray (needs `volumeicon-alsa`)
 - sway_config - sway window manager
 - foot.ini - foot terminal
 - x11-40-libinput.conf - copy to /etc/X11/xorg.conf.d/40-libinput.conf

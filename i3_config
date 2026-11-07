@@ -48,6 +48,9 @@ exec --no-startup-id nm-applet
 # Compositor: no tearing, plus shadows, fades and rounded corners. See picom.conf.
 exec --no-startup-id picom
 
+# Notifications. See dunstrc.
+exec --no-startup-id dunst
+
 # Solid gruvbox background. hsetroot (not xsetroot) so picom can see it.
 exec_always --no-startup-id hsetroot -solid '#282828'
 

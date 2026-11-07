@@ -25,6 +25,7 @@ Linux
   - needs `autorandr` to switch screen layouts on hotplug; save layouts with `autorandr --save <name>`
 - picom.conf - picom compositor for i3 (shadows, fades, rounded corners)
 - kitty.conf - kitty terminal, opened by i3
+- dunstrc - dunst notifications
 - needs `hsetroot` for the i3 background colour
 - sway_config - sway window manager
 - foot.ini - foot terminal

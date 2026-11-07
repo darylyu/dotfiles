@@ -237,6 +237,7 @@ bar {
         status_command i3blocks
         position top
         padding 3px 0
+        tray_padding 5px
         font pango:FiraMono Nerd Font Propo 11
         colors {
             separator $bg-light

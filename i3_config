@@ -45,6 +45,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Compositor: no tearing, plus shadows, fades and rounded corners. See picom.conf.
+exec --no-startup-id picom
+
 # Apply the matching autorandr profile on login and on i3 reload/restart.
 # Hotplug is handled by autorandr's udev rule. Unknown setups fall back to side-by-side.
 exec_always --no-startup-id autorandr --change --default horizontal

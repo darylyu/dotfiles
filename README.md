@@ -23,6 +23,7 @@ macOS
 Linux
 - i3_config, i3status.conf - i3 window manager and status bar
   - needs `autorandr` to switch screen layouts on hotplug; save layouts with `autorandr --save <name>`
+- picom.conf - picom compositor for i3 (shadows, fades, rounded corners)
 - sway_config - sway window manager
 - foot.ini - foot terminal
 - x11-40-libinput.conf - copy to /etc/X11/xorg.conf.d/40-libinput.conf

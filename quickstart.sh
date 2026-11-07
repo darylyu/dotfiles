@@ -34,6 +34,7 @@ case "$(uname)" in
     Linux)
         link i3_config ~/.config/i3/config
         link i3status.conf ~/.config/i3status/config
+        link picom.conf ~/.config/picom/picom.conf
         link sway_config ~/.config/sway/config
         link foot.ini ~/.config/foot/foot.ini
         echo "To configure libinput under X11, run:"

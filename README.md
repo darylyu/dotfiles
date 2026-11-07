@@ -29,6 +29,7 @@ Linux
 - kitty.conf - kitty terminal, opened by i3
 - dunstrc - dunst notifications
 - rofi_power_menu.sh - rofi power menu, opened by `$mod+Shift+e`
+- gsimplecal_config - small calendar, opened by clicking the date in the i3 bar (needs `gsimplecal`)
 - needs `hsetroot` for the i3 background colour
 - sway_config - sway window manager
 - foot.ini - foot terminal

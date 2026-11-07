@@ -45,3 +45,12 @@
     foreground = "#ebdbb2"
     frame_color = "#cc241d"
     timeout = 0
+
+# Volume and brightness pop-ups from i3_osd.sh
+[osd]
+    appname = osd
+    timeout = 2
+    foreground = "#ebdbb2"
+    frame_color = "#504945"
+    highlight = "#d65d0e"
+    icon_position = off

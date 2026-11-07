@@ -61,12 +61,14 @@ exec_always --no-startup-id autorandr --change --default horizontal
 # screen attached, autorandr turns off the laptop screen and i3 moves its workspaces over.
 exec --no-startup-id sh -c 'f=$(echo /proc/acpi/button/lid/*/state); prev=$(cat $f); while sleep 2; do cur=$(cat $f); [ "$cur" != "$prev" ] && autorandr --change --default horizontal; prev=$cur; done'
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Use pactl to adjust volume in PulseAudio. Show the new level in a pop-up (see i3_osd.sh)
+# and update the bar's vol block (signal 10 in i3blocks.conf).
+set $osd ~/.config/i3/osd.sh
+set $refresh_vol pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $osd volume && $refresh_vol
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $osd volume && $refresh_vol
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $osd volume && $refresh_vol
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $osd mic
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -248,8 +250,8 @@ bindsym Mod1+Tab focus right
 bindsym $mod+Ctrl+q exec --no-startup-id i3lock-fancy
 
 # Use fn F5 and F6 to control screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && $osd brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && $osd brightness
 
 # Thin borders. Tabbed and stacked layouts still show titles.
 default_border pixel 2

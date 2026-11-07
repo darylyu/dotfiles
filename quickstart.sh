@@ -37,6 +37,11 @@ case "$(uname)" in
         link picom.conf ~/.config/picom/picom.conf
         link kitty.conf ~/.config/kitty/kitty.conf
         link dunstrc ~/.config/dunst/dunstrc
+        if [ ! -d ~/.config/i3blocks/.git ]; then
+            echo "Cloning https://github.com/vivien/i3blocks-contrib"
+            git clone https://github.com/vivien/i3blocks-contrib ~/.config/i3blocks
+        fi
+        link i3blocks.conf ~/.config/i3blocks/config
         link sway_config ~/.config/sway/config
         link foot.ini ~/.config/foot/foot.ini
         echo "To configure libinput under X11, run:"

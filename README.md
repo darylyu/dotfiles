@@ -24,6 +24,7 @@ Linux
 - i3_config, i3status.conf - i3 window manager and status bar
   - needs `autorandr` to switch screen layouts on hotplug; save layouts with `autorandr --save <name>`
 - picom.conf - picom compositor for i3 (shadows, fades, rounded corners)
+- i3blocks.conf - i3 status bar blocks; scripts come from i3blocks-contrib, which quickstart.sh clones
 - kitty.conf - kitty terminal, opened by i3
 - dunstrc - dunst notifications
 - needs `hsetroot` for the i3 background colour

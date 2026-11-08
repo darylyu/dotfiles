@@ -50,6 +50,11 @@ case "$(uname)" in
         link foot.ini ~/.config/foot/foot.ini
         echo "To configure libinput under X11, run:"
         echo "  sudo cp $DOTFILES/x11-40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf"
+        echo "To sleep, then hibernate, when the laptop lid closes on battery, run:"
+        echo "  sudo mkdir -p /etc/systemd/logind.conf.d /etc/systemd/sleep.conf.d"
+        echo "  sudo cp $DOTFILES/logind-lid.conf /etc/systemd/logind.conf.d/lid.conf"
+        echo "  sudo cp $DOTFILES/sleep-hibernate.conf /etc/systemd/sleep.conf.d/hibernate.conf"
+        echo "  sudo systemctl kill -s HUP systemd-logind"
         ;;
 esac
 

@@ -60,6 +60,9 @@ exec_always --no-startup-id autorandr --change --default horizontal
 # Re-run autorandr when the lid opens or closes. With the lid closed and an external
 # screen attached, autorandr turns off the laptop screen and i3 moves its workspaces over.
 exec --no-startup-id sh -c 'f=$(echo /proc/acpi/button/lid/*/state); prev=$(cat $f); while sleep 2; do cur=$(cat $f); [ "$cur" != "$prev" ] && autorandr --change --default horizontal; prev=$cur; done'
+# Let systemd handle closing the lid (sleep, then hibernate), not xfce4-power-manager.
+# See logind-lid.conf.
+exec --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s true
 
 # Volume icon in the tray: click for a slider, scroll to change, middle-click to mute.
 # See volumeicon.conf.

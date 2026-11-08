@@ -36,6 +36,8 @@ Linux
 - sway_config - sway window manager
 - foot.ini - foot terminal
 - x11-40-libinput.conf - copy to /etc/X11/xorg.conf.d/40-libinput.conf
+- logind-lid.conf - copy to /etc/systemd/logind.conf.d/lid.conf: closing the lid on battery sleeps, then hibernates
+- sleep-hibernate.conf - copy to /etc/systemd/sleep.conf.d/hibernate.conf: hibernate after 2 hours asleep
 
 License
 

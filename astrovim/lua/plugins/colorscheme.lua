@@ -1,13 +1,13 @@
 -- Solarized light on macOS. Gruvbox dark on Linux, to match i3, kitty and rofi.
 -- astroui.lua and user/heirline_tabs.lua pick their colors the same way.
+-- Both stay installed (the other one just isn't loaded) so lazy-lock.json keeps both.
 local mac = vim.fn.has "mac" == 1
 
 ---@type LazySpec
 return {
   {
     "maxmx03/solarized.nvim",
-    cond = mac,
-    lazy = false,
+    lazy = not mac,
     priority = 1000,
     config = function()
       vim.o.background = "light"
@@ -16,8 +16,7 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
-    cond = not mac,
-    lazy = false,
+    lazy = mac,
     priority = 1000,
     config = function()
       vim.o.background = "dark"

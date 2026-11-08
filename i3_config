@@ -273,8 +273,8 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="steam" title="^Friends List$"] floating enable
 
 # Thin borders. Tabbed and stacked layouts still show titles.
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 4
+default_floating_border pixel 4
 hide_edge_borders smart_no_gaps
 title_align center
 

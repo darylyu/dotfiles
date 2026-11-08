@@ -47,6 +47,7 @@ case "$(uname)" in
         fi
         link i3blocks.conf ~/.config/i3blocks/config
         link sway_config ~/.config/sway/config
+        link sway_lock.sh ~/.config/sway/lock.sh
         link waybar_config ~/.config/waybar/config
         link waybar_style.css ~/.config/waybar/style.css
         link foot.ini ~/.config/foot/foot.ini

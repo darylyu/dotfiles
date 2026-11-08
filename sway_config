@@ -1,7 +1,7 @@
 # sway config, a copy of i3_config using sway's equivalents of the i3 tools:
 #   i3bar + i3blocks + tray -> waybar (see waybar_config and waybar_style.css)
 #   hsetroot                -> output * bg
-#   xss-lock + i3lock-fancy -> swayidle + swaylock
+#   xss-lock + i3lock-fancy -> swayidle + swaylock, with a blurred screenshot (sway_lock.sh)
 #   autorandr               -> bindswitch on the lid (sway places screens side by side itself)
 #   setxkbmap               -> input xkb_options
 #   flameshot               -> grim + slurp
@@ -31,7 +31,8 @@ exec dex --autostart --environment sway
 
 # Lock the screen after 10 minutes idle, turn it off after 15, and lock before sleep.
 # `loginctl lock-session` (the power menu's Lock) also locks through swayidle.
-set $lock swaylock -f -c 282828
+# Blurred screenshot with a lock icon, like i3lock-fancy. See sway_lock.sh.
+set $lock ~/.config/sway/lock.sh
 exec swayidle -w \
     timeout 600 '$lock' \
     timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \

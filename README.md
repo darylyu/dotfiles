@@ -34,6 +34,7 @@ Linux
 - needs `hsetroot` for the i3 background colour
 - volumeicon.conf - volume icon in the i3 tray (needs `volumeicon-alsa`)
 - sway_config - sway window manager, a copy of the i3 setup (needs `swayidle`, `swaylock`, `grim` and `slurp`)
+- sway_lock.sh - sway lock screen like i3lock-fancy: blurred screenshot, lock icon, and a ring that shows typing
 - waybar_config, waybar_style.css - waybar, the sway status bar, styled like the i3 bar
 - foot.ini - foot terminal
 - pycharm/ - PyCharm settings, linked into the newest Flatpak PyCharm settings folder (close PyCharm first)

@@ -91,6 +91,9 @@ esac
 
 export PIP_REQUIRE_VIRTUALENV=true
 
+# Claude Code: fullscreen rendering, so the mouse wheel scrolls the conversation.
+export CLAUDE_CODE_NO_FLICKER=1
+
 [[ -f ~/.ssh_aliases ]] && source ~/.ssh_aliases
 
 # Don't auto-activate mise because it unsets the virtualenv when changing dirs

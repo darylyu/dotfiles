@@ -275,12 +275,12 @@ for_window [class="steam" title="^Friends List$"] floating enable
 # Thin borders. Tabbed and stacked layouts still show titles.
 default_border pixel 2
 default_floating_border pixel 2
-hide_edge_borders smart
+hide_edge_borders smart_no_gaps
 title_align center
 
 gaps inner 6
-gaps outer 0
-smart_gaps on
+gaps outer 6
+smart_gaps inverse_outer
 
 bindsym Print exec flameshot gui
 

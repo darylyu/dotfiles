@@ -21,6 +21,7 @@ return {
   -- Optional: statusline (can keep your existing config)
   statusline = {
     provider = " %f %m ",
-    hl = { fg = "#657b83", bg = "#fdf6e3" },
+    -- Solarized light on macOS, gruvbox dark on Linux (see plugins/colorscheme.lua)
+    hl = vim.fn.has "mac" == 1 and { fg = "#657b83", bg = "#fdf6e3" } or { fg = "#ebdbb2", bg = "#3c3836" },
   },
 }

@@ -48,6 +48,12 @@ case "$(uname)" in
         link i3blocks.conf ~/.config/i3blocks/config
         link sway_config ~/.config/sway/config
         link foot.ini ~/.config/foot/foot.ini
+        # PyCharm (Flatpak): link into the newest PyCharm settings folder. Close PyCharm first.
+        pycharm=$(ls -d ~/.var/app/com.jetbrains.PyCharm-Professional/config/JetBrains/PyCharm[0-9]*.[0-9] 2>/dev/null | sort -V | tail -n 1)
+        if [ -n "$pycharm" ]; then
+            link pycharm/dyu_keymap_v2.xml "$pycharm/keymaps/dyu_keymap_v2.xml"
+            link pycharm/vim_settings.xml "$pycharm/options/vim_settings.xml"
+        fi
         echo "To configure libinput under X11, run:"
         echo "  sudo cp $DOTFILES/x11-40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf"
         echo "To sleep, then hibernate, when the laptop lid closes on battery, run:"

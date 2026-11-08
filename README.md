@@ -35,6 +35,9 @@ Linux
 - volumeicon.conf - volume icon in the i3 tray (needs `volumeicon-alsa`)
 - sway_config - sway window manager
 - foot.ini - foot terminal
+- pycharm/ - PyCharm settings, linked into the newest Flatpak PyCharm settings folder (close PyCharm first)
+  - dyu_keymap_v2.xml - keymap for both Mac and Linux: Cmd is Ctrl, the Mac's Ctrl is Ctrl+Alt (needs the macOS For All plugin)
+  - vim_settings.xml - IdeaVim settings, including which Ctrl shortcuts go to PyCharm instead of Vim
 - x11-40-libinput.conf - copy to /etc/X11/xorg.conf.d/40-libinput.conf
 - logind-lid.conf - copy to /etc/systemd/logind.conf.d/lid.conf: closing the lid on battery sleeps, then hibernates
 - sleep-hibernate.conf - copy to /etc/systemd/sleep.conf.d/hibernate.conf: hibernate after 2 hours asleep

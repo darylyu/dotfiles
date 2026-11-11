@@ -38,6 +38,7 @@ Linux
 - sway_config - sway window manager, a copy of the i3 setup (needs `swayidle`, `swaylock`, `grim`, `slurp` and, for screen sharing, `xdg-desktop-portal-wlr`)
 - sway_lock.sh - sway lock screen like i3lock-fancy: blurred screenshot, lock icon, and a ring that shows typing
 - waybar_config, waybar_style.css - waybar, the sway status bar, styled like the i3 bar
+- kanshi_config - screen layouts for sway, like autorandr for i3 (needs `kanshi`)
 - foot.ini - foot terminal
 - pycharm/ - PyCharm settings, linked into the newest Flatpak PyCharm settings folder (close PyCharm first)
   - dyu_keymap_v2.xml - keymap for both Mac and Linux: Cmd is Ctrl, the Mac's Ctrl is Ctrl+Alt (needs the macOS For All plugin)

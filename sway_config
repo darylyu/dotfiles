@@ -2,7 +2,7 @@
 #   i3bar + i3blocks + tray -> waybar (see waybar_config and waybar_style.css)
 #   hsetroot                -> output * bg
 #   xss-lock + i3lock-fancy -> swayidle + swaylock, with a blurred screenshot (sway_lock.sh)
-#   autorandr               -> bindswitch on the lid (sway places screens side by side itself)
+#   autorandr               -> kanshi (see kanshi_config), plus bindswitch on the lid
 #   setxkbmap               -> input xkb_options
 #   flameshot               -> grim + slurp
 #   picom                   -> none: sway 1.7 has no rounded corners or shadows
@@ -43,6 +43,9 @@ exec swayidle -w \
     timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep '$lock' \
     lock '$lock'
+# Don't lock or blank the screen while any window is fullscreen (videos, slides).
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
 
 # NetworkManager tray icon. --indicator so it shows in waybar's tray.
 exec nm-applet --indicator
@@ -52,6 +55,9 @@ exec dunst
 
 # Solid gruvbox background.
 output * bg #282828 solid_color
+
+# Screen layouts for when screens are plugged in or out. See kanshi_config.
+exec kanshi
 
 # With the lid closed and an external screen attached, turn off the laptop screen;
 # sway moves its workspaces over. Closing the lid with no other screen sleeps (see logind-lid.conf).

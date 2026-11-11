@@ -1,0 +1,20 @@
+# ~/.config/kanshi/config
+# Screen layouts for sway, like autorandr for i3. kanshi picks the first profile
+# whose screens match the ones plugged in. To save an exact layout for a screen,
+# add a profile with its name from `swaymsg -t get_outputs`, e.g.
+#   profile home {
+#       output eDP-1 position 0,1440
+#       output "Dell Inc. DELL U2720Q XXXXXXX" mode 3840x2160 scale 1.5 position 0,0
+#   }
+
+# Laptop on its own: make sure its screen is on.
+profile laptop {
+    output eDP-1 enable
+}
+
+# Laptop plus any one external screen: keep sway's side-by-side placement.
+# eDP-1 is listed without settings so the lid switch in sway_config still turns it off.
+profile docked {
+    output eDP-1
+    output * enable
+}

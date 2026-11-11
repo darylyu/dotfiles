@@ -1,0 +1,74 @@
+/* waybar style: gruvbox dark, to match the i3 bar (see the bar block in i3_config). */
+
+* {
+    font-family: "FiraMono Nerd Font Propo";
+    font-size: 11pt;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #1d2021;
+    color: #ebdbb2;
+}
+
+tooltip {
+    background: #282828;
+    border: 1px solid #3c3836;
+}
+
+tooltip label {
+    color: #ebdbb2;
+}
+
+/* Workspaces: orange when focused, grey when shown on another screen. */
+#workspaces button {
+    padding: 0 6px;
+    background: #1d2021;
+    color: #a89984;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button:hover {
+    background: #3c3836;
+}
+
+#workspaces button.visible {
+    background: #3c3836;
+    color: #ebdbb2;
+}
+
+#workspaces button.focused {
+    background: #d65d0e;
+    color: #1d2021;
+}
+
+#workspaces button.urgent {
+    background: #cc241d;
+    color: #ebdbb2;
+}
+
+#mode {
+    padding: 0 8px;
+    background: #cc241d;
+}
+
+/* Text blocks, with a thin line between them like i3bar's separators. */
+#custom-lang,
+#clock {
+    padding: 0 8px;
+    border-right: 1px solid #3c3836;
+}
+
+#tray,
+#pulseaudio,
+#battery {
+    padding: 0 6px;
+    font-size: 13pt;
+}
+
+#battery.critical:not(.charging) {
+    color: #fb4934;
+}

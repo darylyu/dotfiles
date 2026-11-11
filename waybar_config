@@ -1,0 +1,59 @@
+// waybar for sway, laid out like the i3 bar: workspaces on the left;
+// language, date and tray on the right, with icons for volume and battery
+// (their i3 tray icons can't show in sway's tray). Styled in waybar_style.css.
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["custom/lang", "clock", "tray", "pulseaudio", "battery"],
+
+    "sway/workspaces": {
+        "disable-scroll": true
+    },
+
+    // IBus input method. Click or $mod+i to switch.
+    "custom/lang": {
+        "exec": "~/.config/i3/lang.sh",
+        "interval": 5,
+        "signal": 11,
+        "on-click": "~/.config/i3/lang.sh toggle && pkill -RTMIN+11 waybar",
+        "tooltip": false
+    },
+
+    // Left-click: small calendar (gsimplecal). Right-click: GNOME Calendar.
+    // gsimplecal runs under X11 so it can open at the pointer, below the bar.
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "interval": 5,
+        "on-click": "GDK_BACKEND=x11 gsimplecal",
+        "on-click-right": "gnome-calendar",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+
+    // Click for the mixer, scroll to change, middle-click to mute.
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "tooltip-format": "Volume {volume}%",
+        "on-click": "pavucontrol",
+        "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    // Click for power settings.
+    "battery": {
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-plugged": "󰚥",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "{capacity}%, {timeTo}",
+        "states": { "critical": 15 },
+        "on-click": "xfce4-power-manager-settings"
+    }
+}

@@ -1,0 +1,13 @@
+# ~/.config/systemd/user/openssh-agent.service
+# OpenSSH's ssh-agent for every login, i3 or sway. environment-ssh-agent.conf points
+# SSH_AUTH_SOCK at its socket. (The GNOME keyring's agent, gcr-ssh-agent, crashes here
+# whenever a key is used.) quickstart.sh enables it.
+
+[Unit]
+Description=OpenSSH agent (see environment-ssh-agent.conf)
+
+[Service]
+ExecStart=/usr/bin/ssh-agent -D -a %t/ssh-agent.socket
+
+[Install]
+WantedBy=default.target

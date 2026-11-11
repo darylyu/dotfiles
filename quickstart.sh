@@ -32,6 +32,9 @@ link zshenv ~/.zshenv
 # OS-specific
 case "$(uname)" in
     Linux)
+        link environment-ssh-agent.conf ~/.config/environment.d/ssh-agent.conf
+        link openssh-agent.service ~/.config/systemd/user/openssh-agent.service
+        systemctl --user enable openssh-agent.service
         link i3_config ~/.config/i3/config
         link i3_osd.sh ~/.config/i3/osd.sh
         link i3_lang.sh ~/.config/i3/lang.sh

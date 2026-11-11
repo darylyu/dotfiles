@@ -40,6 +40,9 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
+# Don't lock or blank the screen while the focused window is fullscreen (videos, slides):
+# once a minute, if it is, reset the idle timer.
+exec --no-startup-id sh -c 'while sleep 60; do w=$(xprop -root _NET_ACTIVE_WINDOW | cut -d" " -f5); xprop -id "$w" _NET_WM_STATE 2>/dev/null | grep -q FULLSCREEN && xset s reset; done'
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.

@@ -81,6 +81,9 @@ input type:touchpad {
     tap enabled
 }
 
+# Same pointer as the apps (GTK settings), so it doesn't change shape between windows.
+seat * xcursor_theme breeze_cursors 24
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod normal
 

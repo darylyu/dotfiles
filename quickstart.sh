@@ -53,6 +53,7 @@ case "$(uname)" in
         link sway_lock.sh ~/.config/sway/lock.sh
         link waybar_config ~/.config/waybar/config
         link waybar_style.css ~/.config/waybar/style.css
+        link kanshi_config ~/.config/kanshi/config
         link foot.ini ~/.config/foot/foot.ini
         # PyCharm (Flatpak): link into the newest PyCharm settings folder. Close PyCharm first.
         pycharm=$(ls -d ~/.var/app/com.jetbrains.PyCharm-Professional/config/JetBrains/PyCharm[0-9]*.[0-9] 2>/dev/null | sort -V | tail -n 1)

@@ -228,6 +228,8 @@ smart_gaps inverse_outer
 
 # Screenshot of a selected area, copied to the clipboard.
 bindsym Print exec grim -g "$(slurp)" - | wl-copy
+# Shift+Print: the same, and also saved to ~/Pictures.
+bindsym Shift+Print exec f=~/Pictures/screenshot-$(date +%Y-%m-%d-%H%M%S).png && grim -g "$(slurp)" "$f" && wl-copy < "$f"
 
 #                       <border>    <background>  <text>     <indicator>  <child_border>
 client.focused          $accent     $accent       $bg-dark   $indicator   $accent

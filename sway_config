@@ -201,7 +201,9 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="GtkFileChooserDialog"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [app_id="pavucontrol"] floating enable
-for_window [class="Gsimplecal"] floating enable
+# Under sway, gsimplecal can't see the pointer, so open it under the pointer here: centred on it,
+# kept on screen, then moved below the bar.
+for_window [class="Gsimplecal"] floating enable, move position cursor, move down 36 px
 for_window [class="Nm-connection-editor"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [class="steam" title="^Friends List$"] floating enable

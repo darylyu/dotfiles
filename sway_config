@@ -43,6 +43,9 @@ exec swayidle -w \
     timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep '$lock' \
     lock '$lock'
+# Don't lock or blank the screen while any window is fullscreen (videos, slides).
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
 
 # NetworkManager tray icon. --indicator so it shows in waybar's tray.
 exec nm-applet --indicator

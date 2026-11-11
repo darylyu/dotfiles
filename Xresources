@@ -1,0 +1,5 @@
+! ~/.Xresources, loaded at login.
+! Same pointer as the GTK apps and sway, so it keeps the same shape over the desktop
+! and non-GTK windows in i3.
+Xcursor.theme: breeze_cursors
+Xcursor.size: 24

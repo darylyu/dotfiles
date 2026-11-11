@@ -33,6 +33,7 @@ Linux
 - gsimplecal_config - small calendar, opened by clicking the date in the i3 bar (needs `gsimplecal`)
 - needs `hsetroot` for the i3 background colour
 - volumeicon.conf - volume icon in the i3 tray (needs `volumeicon-alsa`)
+- Xresources - X settings for i3: the breeze cursor, same as the apps and sway (`~/.Xresources`)
 - environment-ssh-agent.conf - points i3 and sway sessions at the ssh-agent below (`~/.config/environment.d/ssh-agent.conf`)
 - openssh-agent.service - systemd user service that runs ssh-agent for every login (`~/.config/systemd/user/`)
 - sway_config - sway window manager, a copy of the i3 setup (needs `swayidle`, `swaylock`, `grim`, `slurp` and, for screen sharing, `xdg-desktop-portal-wlr`)

@@ -26,6 +26,11 @@ font pango:FiraMono Nerd Font Mono 11
 
 include /etc/sway/config-vars.d/*
 
+# Screen sharing (Firefox, video calls) goes through xdg-desktop-portal-wlr, which the
+# portal only picks when the desktop is called sway. sway's login entry doesn't set it,
+# so an earlier i3 login's value can linger. Restart the portal in case it already started.
+exec dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway && systemctl --user restart xdg-desktop-portal
+
 # Start XDG autostart .desktop files using dex.
 exec dex --autostart --environment sway
 

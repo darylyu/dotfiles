@@ -35,7 +35,7 @@ Linux
 - volumeicon.conf - volume icon in the i3 tray (needs `volumeicon-alsa`)
 - environment-ssh-agent.conf - points i3 and sway sessions at the ssh-agent below (`~/.config/environment.d/ssh-agent.conf`)
 - openssh-agent.service - systemd user service that runs ssh-agent for every login (`~/.config/systemd/user/`)
-- sway_config - sway window manager, a copy of the i3 setup (needs `swayidle`, `swaylock`, `grim` and `slurp`)
+- sway_config - sway window manager, a copy of the i3 setup (needs `swayidle`, `swaylock`, `grim`, `slurp` and, for screen sharing, `xdg-desktop-portal-wlr`)
 - sway_lock.sh - sway lock screen like i3lock-fancy: blurred screenshot, lock icon, and a ring that shows typing
 - waybar_config, waybar_style.css - waybar, the sway status bar, styled like the i3 bar
 - foot.ini - foot terminal

@@ -44,6 +44,7 @@ case "$(uname)" in
         link rofi_power_menu.sh ~/.config/rofi/power-menu.sh
         link gsimplecal_config ~/.config/gsimplecal/config
         link volumeicon.conf ~/.config/volumeicon/volumeicon
+        link autorandr/docked-1440p ~/.config/autorandr/docked-1440p
         link Xresources ~/.Xresources
         if [ ! -d ~/.config/i3blocks/.git ]; then
             echo "Cloning https://github.com/vivien/i3blocks-contrib"

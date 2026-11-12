@@ -23,6 +23,7 @@ macOS
 Linux
 - i3_config - i3 window manager
   - needs `autorandr` to switch screen layouts on hotplug; save layouts with `autorandr --save <name>`
+- autorandr/docked-1440p - lid closed with the Samsung screen attached: that screen alone at 2560x1440 (`~/.config/autorandr/`)
 - i3_osd.sh - volume and brightness pop-ups for the i3 media keys
 - i3_lang.sh - shows and switches the IBus input method, for the i3 bar and `$mod+i`
 - picom.conf - picom compositor for i3 (shadows, fades, rounded corners)

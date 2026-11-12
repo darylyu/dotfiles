@@ -12,6 +12,13 @@ profile laptop {
     output eDP-1 enable
 }
 
+# Laptop plus the Samsung screen: run it at 2560x1440, not its 4K default
+# (same as autorandr/docked-1440p in i3). The lid switch in sway_config turns eDP-1 off.
+profile samsung-1440p {
+    output eDP-1
+    output "Samsung Electric Company SAMSUNG 0x00000000" mode 2560x1440
+}
+
 # Laptop plus any one external screen: keep sway's side-by-side placement.
 # eDP-1 is listed without settings so the lid switch in sway_config still turns it off.
 profile docked {

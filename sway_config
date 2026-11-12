@@ -80,8 +80,9 @@ exec gsettings set org.freedesktop.ibus.panel show-icon-on-systray false
 # Keep IBus from resetting the keyboard layout on switch, which drops CapsLock-as-Ctrl.
 exec gsettings set org.freedesktop.ibus.general use-system-keyboard-layout true
 
-# CapsLock is Ctrl. Touchpad: natural scrolling, tap to click.
+# CapsLock is Ctrl. Mouse and touchpad: natural (reversed) scrolling. Touchpad: tap to click.
 input type:keyboard xkb_options ctrl:nocaps
+input type:pointer natural_scroll enabled
 input type:touchpad {
     natural_scroll enabled
     tap enabled

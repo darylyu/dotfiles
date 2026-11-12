@@ -58,11 +58,13 @@ exec --no-startup-id dunst
 exec_always --no-startup-id hsetroot -solid '#282828'
 
 # Apply the matching autorandr profile on login and on i3 reload/restart.
-# Hotplug is handled by autorandr's udev rule. Unknown setups fall back to side-by-side.
+# Unknown setups fall back to side-by-side.
 exec_always --no-startup-id autorandr --change --default horizontal
-# Re-run autorandr when the lid opens or closes. With the lid closed and an external
-# screen attached, autorandr turns off the laptop screen and i3 moves its workspaces over.
-exec --no-startup-id sh -c 'f=$(echo /proc/acpi/button/lid/*/state); prev=$(cat $f); while sleep 2; do cur=$(cat $f); [ "$cur" != "$prev" ] && autorandr --change --default horizontal; prev=$cur; done'
+# Re-run autorandr when the lid opens or closes, or a screen is plugged in or out.
+# (autorandr's own hotplug service falls back to a 'default' profile that doesn't exist,
+# so it does nothing.) With the lid closed and an external screen attached, autorandr
+# turns off the laptop screen and i3 moves its workspaces over.
+exec --no-startup-id sh -c 's() { cat /proc/acpi/button/lid/*/state /sys/class/drm/*/status; }; prev=$(s); while sleep 2; do cur=$(s); [ "$cur" != "$prev" ] && autorandr --change --default horizontal; prev=$cur; done'
 # Let systemd handle closing the lid (sleep, then hibernate), not xfce4-power-manager.
 # See logind-lid.conf.
 exec --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s true

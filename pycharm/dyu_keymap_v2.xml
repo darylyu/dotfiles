@@ -2,6 +2,7 @@
   <action id="ActivateBigDataToolWindowToolWindow">
     <keyboard-shortcut first-keystroke="shift ctrl alt b" />
   </action>
+  <action id="ActivateBookmarksToolWindow" />
   <action id="ActivateTerminalToolWindow">
     <keyboard-shortcut first-keystroke="ctrl t" />
   </action>
@@ -56,6 +57,7 @@
   <action id="OpenInlineChatAction">
     <keyboard-shortcut first-keystroke="shift ctrl alt j" />
   </action>
+  <action id="RunAnything" />
   <action id="ShowUsages">
     <keyboard-shortcut first-keystroke="ctrl u" />
     <keyboard-shortcut first-keystroke="ctrl alt f7" />

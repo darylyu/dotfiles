@@ -42,7 +42,7 @@ Linux
 - waybar_config, waybar_style.css - waybar, the sway status bar, styled like the i3 bar
 - kanshi_config - screen layouts for sway, like autorandr for i3 (needs `kanshi`)
 - foot.ini - foot terminal
-- pycharm/ - PyCharm settings, linked into the newest Flatpak PyCharm settings folder (close PyCharm first)
+- pycharm/ - PyCharm settings, linked into the newest PyCharm settings folder, Flatpak on Linux and `~/Library/Application Support/JetBrains/` on Mac (close PyCharm first)
   - dyu_keymap_v2.xml - keymap for both Mac and Linux: Cmd is Ctrl, the Mac's Ctrl is Ctrl+Alt (needs the macOS For All plugin)
   - vim_settings.xml - IdeaVim settings, including which Ctrl shortcuts go to PyCharm instead of Vim
 - x11-40-libinput.conf - copy to /etc/X11/xorg.conf.d/40-libinput.conf

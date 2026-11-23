@@ -71,6 +71,14 @@ case "$(uname)" in
         echo "  sudo cp $DOTFILES/sleep-hibernate.conf /etc/systemd/sleep.conf.d/hibernate.conf"
         echo "  sudo systemctl kill -s HUP systemd-logind"
         ;;
+    Darwin)
+        # PyCharm: link into the newest PyCharm settings folder. Close PyCharm first.
+        pycharm=$(ls -d ~/Library/Application\ Support/JetBrains/PyCharm[0-9]*.[0-9] 2>/dev/null | sort -V | tail -n 1)
+        if [ -n "$pycharm" ]; then
+            link pycharm/dyu_keymap_v2.xml "$pycharm/keymaps/dyu_keymap_v2.xml"
+            link pycharm/vim_settings.xml "$pycharm/options/vim_settings.xml"
+        fi
+        ;;
 esac
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then

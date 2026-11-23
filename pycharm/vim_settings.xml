@@ -1,6 +1,8 @@
 <application>
   <component name="VimEditorSettings">
-    <editor />
+    <editor>
+      <key-repeat enabled="false" />
+    </editor>
   </component>
   <component name="VimKeySettings">
     <shortcut-conflicts>
@@ -91,7 +93,7 @@
       <idea-put enabled="false" />
       <was-automatically-subscribed-to-eap enabled="false" />
       <first-ideavim-version value="2.19.0" />
-      <last-ideavim-version value="2.48.1" />
+      <last-ideavim-version value="2.49.1" />
     </notifications>
   </component>
 </application>

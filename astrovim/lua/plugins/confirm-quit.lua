@@ -16,7 +16,7 @@ local function closing_window_exits()
   return true
 end
 
-local function confirm_exit() return vim.fn.confirm("Quit Neovim?", "&Yes\n&No", 2) == 1 end
+local function confirm_exit() return vim.fn.confirm("Quit Neovim?", "&Yes\n&No", 1) == 1 end
 
 local quit_all_cmds =
   { qa = true, qall = true, quita = true, quitall = true, wqa = true, wqall = true, xa = true, xall = true }

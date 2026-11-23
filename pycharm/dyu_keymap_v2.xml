@@ -14,33 +14,42 @@
     <keyboard-shortcut first-keystroke="alt open_bracket" />
     <keyboard-shortcut first-keystroke="meta open_bracket" />
     <keyboard-shortcut first-keystroke="ctrl alt left" />
-    <keyboard-shortcut first-keystroke="ctrl open_bracket" />
+    <keyboard-shortcut first-keystroke="shift ctrl open_bracket" />
   </action>
   <action id="CloseProject">
     <keyboard-shortcut first-keystroke="shift ctrl w" />
   </action>
+  <action id="Compare.SameVersion" />
+  <action id="CompareTwoFiles" />
+  <action id="Diff.NextChange" />
+  <action id="Diff.PrevChange" />
+  <action id="Diff.ShowDiff" />
   <action id="EditorCodeBlockEnd" />
   <action id="EditorCodeBlockStart" />
   <action id="EditorDecreaseFontSize">
     <keyboard-shortcut first-keystroke="ctrl minus" />
   </action>
+  <action id="EditorDuplicate" />
   <action id="EditorIncreaseFontSize">
     <keyboard-shortcut first-keystroke="ctrl equals" />
   </action>
   <action id="EditorResetFontSize">
     <keyboard-shortcut first-keystroke="ctrl 0" />
   </action>
+  <action id="FileChooser.GotoDesktop" />
   <action id="Forward">
     <keyboard-shortcut first-keystroke="ctrl alt close_bracket" />
     <keyboard-shortcut first-keystroke="alt close_bracket" />
     <keyboard-shortcut first-keystroke="meta close_bracket" />
     <keyboard-shortcut first-keystroke="ctrl alt right" />
     <keyboard-shortcut first-keystroke="ctrl close_bracket" />
+    <keyboard-shortcut first-keystroke="shift ctrl close_bracket" />
   </action>
   <action id="GotoDeclaration">
     <mouse-shortcut keystroke="control button1" />
     <mouse-shortcut keystroke="button2" />
     <keyboard-shortcut first-keystroke="ctrl alt u" />
+    <keyboard-shortcut first-keystroke="ctrl d" />
   </action>
   <action id="GotoImplementation">
     <keyboard-shortcut first-keystroke="ctrl b" />
@@ -54,10 +63,13 @@
     <mouse-shortcut keystroke="shift control button1" />
   </action>
   <action id="ImplementMethods" />
+  <action id="NextTab" />
   <action id="OpenInlineChatAction">
     <keyboard-shortcut first-keystroke="shift ctrl alt j" />
   </action>
+  <action id="PreviousTab" />
   <action id="RunAnything" />
+  <action id="SendEOF" />
   <action id="ShowUsages">
     <keyboard-shortcut first-keystroke="ctrl u" />
     <keyboard-shortcut first-keystroke="ctrl alt f7" />
